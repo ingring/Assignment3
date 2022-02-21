@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .content {
   color: #5f7cfa;
+  padding: 2em 4em;
+}
+
+h1 {
+  text-align: center;
 }
 
 .ball-container {
@@ -30,10 +40,12 @@
     width: 120;
     -webkit-transform: translateY(80vh);
             transform: translateY(80vh);
+    background-color: #5f7cfa;
   }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+    background-color: #70BA9E;
   }
 }
 
@@ -51,10 +63,12 @@
     width: 120;
     -webkit-transform: translateY(80vh);
             transform: translateY(80vh);
+    background-color: #5f7cfa;
   }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+    background-color: #70BA9E;
   }
 }
 /*# sourceMappingURL=index.css.map */
