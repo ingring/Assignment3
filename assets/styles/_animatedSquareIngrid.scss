@@ -1,0 +1,19 @@
+.ball-container {
+  position: absolute;
+  }
+  
+.ball {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: $ballIngrid;
+  border-radius: 50%;
+  animation: bounce 10s linear 1s infinite;
+}
+  
+  @keyframes bounce {
+  10% {height: 100px; width: 100px;}
+  30% {height: 100px; width: 90px;}
+  50% {height: 60px; width: 120; transform: translateY(80vh);}
+  100% {transform: translateY(0px);}
+}

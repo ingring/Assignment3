@@ -1,4 +1,60 @@
 .content {
   color: #5f7cfa;
 }
+
+.ball-container {
+  position: absolute;
+}
+
+.ball {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: #70BA9E;
+  border-radius: 50%;
+  -webkit-animation: bounce 10s linear 1s infinite;
+          animation: bounce 10s linear 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  10% {
+    height: 100px;
+    width: 100px;
+  }
+  30% {
+    height: 100px;
+    width: 90px;
+  }
+  50% {
+    height: 60px;
+    width: 120;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  10% {
+    height: 100px;
+    width: 100px;
+  }
+  30% {
+    height: 100px;
+    width: 90px;
+  }
+  50% {
+    height: 60px;
+    width: 120;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 /*# sourceMappingURL=index.css.map */
