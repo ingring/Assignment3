@@ -12,6 +12,13 @@ h1 {
   text-align: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  .body {
+    background-color: black;
+    color: white;
+  }
+}
+
 .ball-container {
   position: absolute;
 }
@@ -69,6 +76,25 @@ h1 {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     background-color: #70BA9E;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .ball {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ball {
+    background-color: white;
+  }
+}
+
+@media (orientation: landscape) {
+  .ball {
+    background-color: #4c894b;
   }
 }
 /*# sourceMappingURL=index.css.map */

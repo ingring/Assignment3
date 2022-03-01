@@ -17,3 +17,21 @@
   50% {height: 60px; width: 120; transform: translateY(80vh); background-color: $primary;}
   100% {transform: translateY(0px); background-color: $ballIngrid}
 }
+
+@media (prefers-reduced-motion) {
+  .ball {
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ball {
+    background-color: $ballIngrid-darkMode;
+  }
+}
+
+@media (orientation: landscape) {
+  .ball {
+    background-color: $ballIngrid-change;
+  }
+}
