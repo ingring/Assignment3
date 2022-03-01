@@ -15,6 +15,7 @@ h1 {
 @media (prefers-color-scheme: dark) {
   .body {
     background-color: black;
+    color: white;
   }
 }
 
@@ -93,7 +94,7 @@ h1 {
 
 @media (orientation: landscape) {
   .ball {
-    background-color: red;
+    background-color: #4c894b;
   }
 }
 /*# sourceMappingURL=index.css.map */

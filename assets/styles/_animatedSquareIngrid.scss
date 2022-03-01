@@ -26,12 +26,12 @@
 
 @media (prefers-color-scheme: dark) {
   .ball {
-    background-color: white;
+    background-color: $ballIngrid-darkMode;
   }
 }
 
 @media (orientation: landscape) {
   .ball {
-    background-color: red;
+    background-color: $ballIngrid-change;
   }
 }
