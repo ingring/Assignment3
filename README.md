@@ -18,6 +18,10 @@ The language used in this project is html, scss, and js. To edit the project we 
 Henna, Thomas and Ingrid maintains and contributes to the project. 
 
 ## Storyboard
+
+### Design idea
+Different background pictures that changes from every scene with information about the goal. In addition, a water drop timeline on the side that indicates how long the story is. 
+
 ![alt scene 1](storyboard/scene1.PNG)
 ![alt scene 2](storyboard/scene2.PNG)
 ![alt scene 3](storyboard/scene3.PNG)
