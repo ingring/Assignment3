@@ -10,10 +10,11 @@
 
 h1 {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
-  .body {
+  .content {
     background-color: black;
     color: white;
   }
@@ -47,7 +48,7 @@ h1 {
     width: 120;
     -webkit-transform: translateY(80vh);
             transform: translateY(80vh);
-    background-color: #5f7cfa;
+    background-color: #4c894b;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -70,7 +71,7 @@ h1 {
     width: 120;
     -webkit-transform: translateY(80vh);
             transform: translateY(80vh);
-    background-color: #5f7cfa;
+    background-color: #4c894b;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -83,18 +84,45 @@ h1 {
   .ball {
     -webkit-animation: none;
             animation: none;
+    -webkit-box-shadow: 5px 10px 8px black;
+            box-shadow: 5px 10px 8px black;
+  }
+}
+
+@media (prefers-reduced-motion) and (orientation: landscape) {
+  .ball {
+    height: 15vw;
+    width: 15vw;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .ball {
-    background-color: white;
+    background-color: #b388ce;
   }
-}
-
-@media (orientation: landscape) {
-  .ball {
-    background-color: #4c894b;
+  @-webkit-keyframes bounce {
+    50% {
+      height: 60px;
+      width: 120;
+      -webkit-transform: translateY(80vh);
+              transform: translateY(80vh);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @keyframes bounce {
+    50% {
+      height: 60px;
+      width: 120;
+      -webkit-transform: translateY(80vh);
+              transform: translateY(80vh);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
   }
 }
 /*# sourceMappingURL=index.css.map */

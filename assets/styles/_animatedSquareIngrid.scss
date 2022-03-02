@@ -11,16 +11,24 @@
   animation: bounce 10s linear 1s infinite;
 }
   
-  @keyframes bounce {
+@keyframes bounce {
   10% {height: 100px; width: 100px;}
   30% {height: 100px; width: 90px;}
-  50% {height: 60px; width: 120; transform: translateY(80vh); background-color: $primary;}
+  50% {height: 60px; width: 120; transform: translateY(80vh); background-color: $ballIngrid-change;}
   100% {transform: translateY(0px); background-color: $ballIngrid}
 }
 
 @media (prefers-reduced-motion) {
   .ball {
     animation: none;
+    box-shadow: 5px 10px 8px $ballIngrid-shadow;
+  }
+
+  @media (orientation: landscape) {
+    .ball {
+      height: 15vw;
+      width: 15vw;
+    }
   }
 }
 
@@ -28,10 +36,9 @@
   .ball {
     background-color: $ballIngrid-darkMode;
   }
-}
 
-@media (orientation: landscape) {
-  .ball {
-    background-color: $ballIngrid-change;
+  @keyframes bounce {
+    50% {height: 60px; width: 120; transform: translateY(80vh);}
+    100% {transform: translateY(0px);}
   }
 }
