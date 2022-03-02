@@ -16,3 +16,6 @@ The language used in this project is html, scss, and js. To edit the project we 
 
 ## Contributes
 Henna, Thomas and Ingrid maintains and contributes to the project. 
+
+# Storyboard
+![alt text](storyboard/scene1.PNG)
