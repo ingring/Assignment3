@@ -10,10 +10,11 @@
 
 h1 {
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
-    .body {
+    .content {
         background-color: $body-background-darkMode;
         color: $body-color-darkMode;
     }
