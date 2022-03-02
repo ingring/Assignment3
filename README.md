@@ -1,5 +1,4 @@
 # Assignment2
-## About the project
 ### Description of the project
 The project is a scrollytelling of the sustainable goal 6 Clean Water and sanitation. 
 
@@ -31,7 +30,6 @@ Henna, Thomas and Ingrid maintains and contributes to the project.
 ![alt scene 10](storyboard/scene10.PNG)
 
 ### Animations
+Scene 1: one big water drop that moves from the glas and goes down to the buttom
 
-    Scene 1: one big water drop that moves from the glas and goes down to the buttom
-
-    Scene 10: water drops moving from the top to bottom 
+Scene 7: water drops moving from the top to bottom 
