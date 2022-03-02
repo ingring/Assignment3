@@ -1,0 +1,54 @@
+.tsquare {
+    margin: 0 auto;
+    background: $body--tsquare-background__dark;
+    animation: trotate 3s ease-in-out infinite 0s alternate none;
+
+    border-radius: 50% / 33%;
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: "segoe ui";
+    }
+}
+
+@keyframes trotate {
+
+    from { 
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg * 1.5);
+    }
+
+}
+
+@media (prefers-reduced-motion) {
+
+    .tsquare {
+        animation-play-state: paused;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    .tsquare {
+        background: $body--tsquare-background__light;
+        color: $body--tsquare-color__light;
+    }
+
+}
+
+@media (orientation: portrait) {
+
+    .tsquare {
+        width: 100%;
+    }
+
+}

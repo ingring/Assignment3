@@ -1,4 +1,9 @@
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
@@ -123,6 +128,71 @@ h1 {
       -webkit-transform: translateY(0px);
               transform: translateY(0px);
     }
+  }
+}
+
+.tsquare {
+  margin: 0 auto;
+  background: darkslateblue;
+  -webkit-animation: trotate 3s ease-in-out infinite 0s alternate none;
+          animation: trotate 3s ease-in-out infinite 0s alternate none;
+  border-radius: 50% / 33%;
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tsquare h2 {
+  font-family: "segoe ui";
+}
+
+@-webkit-keyframes trotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(540deg);
+            transform: rotateZ(540deg);
+  }
+}
+
+@keyframes trotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(540deg);
+            transform: rotateZ(540deg);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .tsquare {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .tsquare {
+    background: gray;
+    color: black;
+  }
+}
+
+@media (orientation: portrait) {
+  .tsquare {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=index.css.map */
