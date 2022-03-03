@@ -1,8 +1,8 @@
-.ball-container {
+.iball-container {
   position: absolute;
   }
   
-.ball {
+.iball {
   height: 100px;
   width: 100px;
   position: relative;
@@ -19,13 +19,13 @@
 }
 
 @media (prefers-reduced-motion) {
-  .ball {
+  .iball {
     animation: none;
     box-shadow: 5px 10px 8px $ballIngrid-shadow;
   }
 
   @media (orientation: landscape) {
-    .ball {
+    .iball {
       height: 15vw;
       width: 15vw;
     }
@@ -33,7 +33,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .ball {
+  .iball {
     background-color: $ballIngrid-darkMode;
   }
 

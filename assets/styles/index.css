@@ -25,11 +25,11 @@ h1 {
   }
 }
 
-.ball-container {
+.iball-container {
   position: absolute;
 }
 
-.ball {
+.iball {
   height: 100px;
   width: 100px;
   position: relative;
@@ -86,7 +86,7 @@ h1 {
 }
 
 @media (prefers-reduced-motion) {
-  .ball {
+  .iball {
     -webkit-animation: none;
             animation: none;
     -webkit-box-shadow: 5px 10px 8px black;
@@ -95,14 +95,14 @@ h1 {
 }
 
 @media (prefers-reduced-motion) and (orientation: landscape) {
-  .ball {
+  .iball {
     height: 15vw;
     width: 15vw;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .ball {
+  .iball {
     background-color: #b388ce;
   }
   @-webkit-keyframes bounce {
