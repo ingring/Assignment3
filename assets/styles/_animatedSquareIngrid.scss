@@ -1,7 +1,3 @@
-.iball-container {
-  position: absolute;
-  }
-  
 .iball {
   height: 100px;
   width: 100px;
@@ -14,7 +10,7 @@
 @keyframes bounce {
   10% {height: 100px; width: 100px;}
   30% {height: 100px; width: 90px;}
-  50% {height: 60px; width: 120; transform: translateY(80vh); background-color: $ballIngrid-change;}
+  50% {height: 60px; width: 120; transform: translateY(70vh); background-color: $ballIngrid-change;}
   100% {transform: translateY(0px); background-color: $ballIngrid}
 }
 

@@ -20,13 +20,9 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
   .content {
-    background-color: black;
+    background-color: #333;
     color: white;
   }
-}
-
-.iball-container {
-  position: absolute;
 }
 
 .iball {
@@ -51,8 +47,8 @@ h1 {
   50% {
     height: 60px;
     width: 120;
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(70vh);
+            transform: translateY(70vh);
     background-color: #4c894b;
   }
   100% {
@@ -74,8 +70,8 @@ h1 {
   50% {
     height: 60px;
     width: 120;
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(70vh);
+            transform: translateY(70vh);
     background-color: #4c894b;
   }
   100% {
@@ -193,6 +189,157 @@ h1 {
 @media (orientation: portrait) {
   .tsquare {
     width: 100%;
+  }
+}
+
+body {
+  background-color: #333;
+}
+
+.sphere {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border-radius: 50% 50%;
+  position: relative;
+  margin: 200px auto;
+  -webkit-animation-name: sphere;
+          animation-name: sphere;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.sphere:hover {
+  opacity: 0;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes sphere {
+  0% {
+    background-color: red;
+    border-radius: 50% 50%;
+  }
+  10% {
+    background-color: orange;
+  }
+  20% {
+    background-color: yellow;
+  }
+  30% {
+    background-color: lightgreen;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: navy;
+    border-radius: 0;
+  }
+  60% {
+    background-color: blue;
+  }
+  70% {
+    background-color: pink;
+  }
+  80% {
+    background-color: orchid;
+  }
+  90% {
+    background-color: purple;
+  }
+  100% {
+    background-color: maroon;
+    border-radius: 50% 50%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sphere {
+  0% {
+    background-color: red;
+    border-radius: 50% 50%;
+  }
+  10% {
+    background-color: orange;
+  }
+  20% {
+    background-color: yellow;
+  }
+  30% {
+    background-color: lightgreen;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: navy;
+    border-radius: 0;
+  }
+  60% {
+    background-color: blue;
+  }
+  70% {
+    background-color: pink;
+  }
+  80% {
+    background-color: orchid;
+  }
+  90% {
+    background-color: purple;
+  }
+  100% {
+    background-color: maroon;
+    border-radius: 50% 50%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sphere {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sphere {
+    -webkit-animation: sphere 8s linear infinite;
+            animation: sphere 8s linear infinite;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: lightgrey;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    background-color: #333;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: white;
   }
 }
 /*# sourceMappingURL=index.css.map */
