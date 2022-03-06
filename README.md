@@ -37,3 +37,6 @@ Different background pictures that changes from every scene with information abo
 Scene 1: one big water drop that moves from the glas and goes down to the buttom
 
 Scene 7: water drops moving from the top to bottom 
+
+### Link to our storyboard on figma
+https://www.figma.com/file/kdyTKKDRkItuQt2JSbYhkJ/storyboard-goal-6?node-id=175%3A34
