@@ -45,7 +45,7 @@
 }
 
 /*Henna's squares*/
-hbody {
+body {
     background-color: #333;
   }
   
@@ -96,25 +96,25 @@ hbody {
   }
 
   @media (prefers-color-scheme: dark) {
-      hbody {
+      body {
         background-color: #333;
       }
   }
 
   @media (prefers-color-scheme: light) {
-      hbody {
+      body {
           background-color: lightgrey;
       }
   }
 
   @media (orientation: landscape) {
-      hbody {
+      body {
           background-color: #333;
       }
   }
 
   @media (orientation: portrait) {
-      hbody {
+      body {
           background-color: white;
       }
   }
