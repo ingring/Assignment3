@@ -34,9 +34,17 @@ Different background pictures that changes from every scene with information abo
 ![alt scene 10](storyboard/scene10.PNG)
 
 ### Animations
-Scene 1: one big water drop that moves from the glas and goes down to the buttom
+#### Animation on scene 1: 
+When the user starts to scroll vertically a water drop from the glass will loosen and move from the glas and go down to the bottom of the scene as the same speed as the user scroll. When the water drop starts to move, the logo shrinks and goes to the right top corner of the page. The logo will stick to the corner and stay there through the whole scrollytelling. 
 
-Scene 7: water drops moving from the top to bottom 
+#### Animation on scene 7: 
+Many water drops are moving from the top to the bottom. The water drops are moving behind the text. 
+
+#### Animation on every scene:
+When the user scroll down to the next scene, the background picture will have a fade effect and slowly zoom 10%. The text will come from the buttom and goes to the top in the same speed as the user scroll. The current water drop will move from side to side. As well, the current water drop will fade away when the user has scrolled past the scene. Then a new water drop will appear more white than the other water drops. It is also possible to navigate to the top if the user clicks on the logo. When the user hover over the logo, the opacity will be 50%. 
+
+#### Media queries:
+We will use media queries to stop the animations if the user has turned off the animations on the settings of their desktop. We will also use media queries to affect how the user sees the background picture depending on the device being landscape vs portrait. On the scenes with black background, the media queries will change the background color to white and the text color to black if the user prefers light mode. 
 
 ### Link to our storyboard on figma
 https://www.figma.com/file/kdyTKKDRkItuQt2JSbYhkJ/storyboard-goal-6?node-id=175%3A34
