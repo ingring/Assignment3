@@ -7,8 +7,8 @@ body {
     padding: 0;
 }
 
-.content{
-    color: $primary;
+main {
+    color: map.get($main, "color");
     padding: 2em 4em;
 }
 
@@ -16,10 +16,3 @@ h1 {
     text-align: center;
     padding-bottom: 2rem;
 }
-
-@media (prefers-color-scheme: dark) {
-    .content {
-        background-color: $body-background-darkMode;
-        color: $body-color-darkMode;
-    }
-  }

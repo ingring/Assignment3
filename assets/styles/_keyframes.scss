@@ -1,0 +1,49 @@
+@keyframes bounce {
+    10% {
+        height: 100px; 
+        width: 100px;
+    }
+
+    30% {
+        height: 100px; 
+        width: 90px;
+    }
+
+    50% {
+        height: 60px; 
+        width: 120; 
+        transform: translateY(70vh); 
+        background-color: map.get($iball, "secondary");
+    }
+    
+    100% {
+        transform: translateY(0px); 
+        background-color: map.get($iball, "primary")
+    }
+}
+
+@keyframes sphere {
+    0% {background-color: red; border-radius: 50% 50%;}
+    10% {background-color: orange;}
+    20% {background-color: yellow;}
+    30% {background-color: lightgreen;}
+    40% {background-color: green}
+    50% {background-color: navy; border-radius: 0;}
+    60% {background-color: blue;}
+    70% {background-color: pink;}
+    80% {background-color: orchid;}
+    90% {background-color: purple;}
+    100% {background-color: maroon; border-radius: 50% 50%; transform: rotate(360deg);}
+}
+
+@keyframes trotate {
+
+    from { 
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg * 1.5);
+    }
+
+}

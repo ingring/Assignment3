@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 
-.content {
+main {
   color: #5f7cfa;
   padding: 2em 4em;
 }
@@ -16,13 +16,6 @@ body {
 h1 {
   text-align: center;
   padding-bottom: 2rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .content {
-    background-color: #333;
-    color: white;
-  }
 }
 
 .iball {
@@ -33,6 +26,58 @@ h1 {
   border-radius: 50%;
   -webkit-animation: bounce 10s linear 1s infinite;
           animation: bounce 10s linear 1s infinite;
+}
+
+/*Henna's square*/
+.sphere {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border-radius: 50% 50%;
+  position: relative;
+  margin: 200px auto;
+  -webkit-animation-name: sphere;
+          animation-name: sphere;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.sphere:hover {
+  opacity: 0;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+/*Thomas's square*/
+.tsquare {
+  margin: 0 auto;
+  background: darkslateblue;
+  -webkit-animation: trotate 3s ease-in-out infinite 0s alternate none;
+          animation: trotate 3s ease-in-out infinite 0s alternate none;
+  border-radius: 50% / 33%;
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tsquare h2 {
+  font-family: "segoe ui";
 }
 
 @-webkit-keyframes bounce {
@@ -79,148 +124,6 @@ h1 {
             transform: translateY(0px);
     background-color: #70BA9E;
   }
-}
-
-@media (prefers-reduced-motion) {
-  .iball {
-    -webkit-animation: none;
-            animation: none;
-    -webkit-box-shadow: 5px 10px 8px black;
-            box-shadow: 5px 10px 8px black;
-  }
-}
-
-@media (prefers-reduced-motion) and (orientation: landscape) {
-  .iball {
-    height: 15vw;
-    width: 15vw;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .iball {
-    background-color: #b388ce;
-  }
-  @-webkit-keyframes bounce {
-    50% {
-      height: 60px;
-      width: 120;
-      -webkit-transform: translateY(80vh);
-              transform: translateY(80vh);
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
-  @keyframes bounce {
-    50% {
-      height: 60px;
-      width: 120;
-      -webkit-transform: translateY(80vh);
-              transform: translateY(80vh);
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
-}
-
-.tsquare {
-  margin: 0 auto;
-  background: darkslateblue;
-  -webkit-animation: trotate 3s ease-in-out infinite 0s alternate none;
-          animation: trotate 3s ease-in-out infinite 0s alternate none;
-  border-radius: 50% / 33%;
-  width: 200px;
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.tsquare h2 {
-  font-family: "segoe ui";
-}
-
-@-webkit-keyframes trotate {
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(540deg);
-            transform: rotateZ(540deg);
-  }
-}
-
-@keyframes trotate {
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(540deg);
-            transform: rotateZ(540deg);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .tsquare {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .tsquare {
-    background: gray;
-    color: black;
-  }
-}
-
-@media (orientation: portrait) {
-  .tsquare {
-    width: 100%;
-  }
-}
-
-body {
-  background-color: #333;
-}
-
-.sphere {
-  width: 150px;
-  height: 150px;
-  background-color: red;
-  border-radius: 50% 50%;
-  position: relative;
-  margin: 200px auto;
-  -webkit-animation-name: sphere;
-          animation-name: sphere;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.sphere:hover {
-  opacity: 0;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 
 @-webkit-keyframes sphere {
@@ -305,17 +208,95 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@-webkit-keyframes trotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(540deg);
+            transform: rotateZ(540deg);
+  }
+}
+
+@keyframes trotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(540deg);
+            transform: rotateZ(540deg);
+  }
+}
+
+@media (prefers-reduced-motion) {
   .sphere {
     -webkit-animation: none;
             animation: none;
   }
+  .tsquare {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+  .iball {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 5px 10px 8px black;
+            box-shadow: 5px 10px 8px black;
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .sphere {
-    -webkit-animation: sphere 8s linear infinite;
-            animation: sphere 8s linear infinite;
+@media (prefers-reduced-motion) and (orientation: landscape) {
+  .iball {
+    height: 15vw;
+    width: 15vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .tsquare {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .iball {
+    background-color: #b388ce;
+  }
+  @-webkit-keyframes bounce {
+    50% {
+      height: 60px;
+      width: 120;
+      -webkit-transform: translateY(80vh);
+              transform: translateY(80vh);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @keyframes bounce {
+    50% {
+      height: 60px;
+      width: 120;
+      -webkit-transform: translateY(80vh);
+              transform: translateY(80vh);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  main {
+    background-color: lightgrey;
+  }
+  .tsquare {
+    background: gray;
+    color: black;
   }
 }
 
@@ -340,6 +321,13 @@ body {
 @media (orientation: portrait) {
   body {
     background-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .content {
+    background-color: #333;
+    color: white;
   }
 }
 /*# sourceMappingURL=index.css.map */

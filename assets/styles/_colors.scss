@@ -1,16 +1,21 @@
-$primary: rgb(95, 124, 250);
+@use "sass:map";
 
-//Background-colors to Ingrid's animated square
-$ballIngrid: #70BA9E;
-$ballIngrid-change: #4c894b;
-$ballIngrid-darkMode: #b388ce;
-$ballIngrid-shadow: black;
+$main: (
+  "color": white,
+  "color__light" : black,
+  "background": #333,
+  "background__light" : rgb(226, 224, 212),
+);
 
-// Thomas
-$body--tsquare-background__dark: darkslateblue;
-$body--tsquare-background__light: gray;
-$body--tsquare-color__light: black;
+$iball: (
+  "background__primary": #70BA9E,
+  "background__secondary": #4c894b,
+  "background__light" : #b388ce,
+  "shadow" : black,
+);
 
-//colors to the body on dark mode 
-$body-background-darkMode: #333;
-$body-color-darkMode: white;
+$tsquare: (
+  "background__dark": darkslateblue,
+  "background__light": gray,
+  "color__light" : black,
+);

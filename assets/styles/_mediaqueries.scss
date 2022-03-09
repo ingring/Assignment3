@@ -1,0 +1,47 @@
+@media (prefers-reduced-motion) {
+    .sphere, .iball {
+        animation: none;
+    }
+    
+    .tsquare {
+        animation-play-state: paused;
+    }
+
+    .iball {
+      box-shadow: 5px 10px 8px map.get($iball, "shadow");
+    }
+    
+    //The user settings is on reduced motion and the orientation is landscape
+    @media (orientation: landscape) {
+      .iball {
+        height: 15vw;
+        width: 15vw;
+      }
+    }
+}
+
+@media (orientation: portrait) {
+    .tsquare, .sphere {
+        width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    main {
+        background-color: map.get($main, "background__light");
+    }
+    
+    .iball {
+      background-color: map.get($iball, "background__light");
+    }
+  
+    @keyframes bounce {
+      50% {height: 60px; width: 120; transform: translateY(80vh);}
+      100% {transform: translateY(0px);}
+    }
+    
+    .tsquare {
+        background: map.get($tsquare, "background__light");
+        color: map.get($tsquare, "color__light");
+    }
+}
