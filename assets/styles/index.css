@@ -9,8 +9,9 @@ body {
 }
 
 main {
-  color: #5f7cfa;
+  color: white;
   padding: 2em 4em;
+  background-color: #333;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
   padding-bottom: 2rem;
 }
 
-.iball {
+.square--ingrid {
   height: 100px;
   width: 100px;
   position: relative;
@@ -28,8 +29,7 @@ h1 {
           animation: bounce 10s linear 1s infinite;
 }
 
-/*Henna's square*/
-.sphere {
+.square--henna {
   width: 150px;
   height: 150px;
   background-color: red;
@@ -48,7 +48,7 @@ h1 {
           animation-delay: 1s;
 }
 
-.sphere:hover {
+.square--henna:hover {
   opacity: 0;
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
@@ -56,8 +56,7 @@ h1 {
           animation-play-state: paused;
 }
 
-/*Thomas's square*/
-.tsquare {
+.square--thomas {
   margin: 0 auto;
   background: darkslateblue;
   -webkit-animation: trotate 3s ease-in-out infinite 0s alternate none;
@@ -76,7 +75,7 @@ h1 {
           align-items: center;
 }
 
-.tsquare h2 {
+.square--thomas h2 {
   font-family: "segoe ui";
 }
 
@@ -128,7 +127,6 @@ h1 {
 
 @-webkit-keyframes sphere {
   0% {
-    background-color: red;
     border-radius: 50% 50%;
   }
   10% {
@@ -169,7 +167,6 @@ h1 {
 
 @keyframes sphere {
   0% {
-    background-color: red;
     border-radius: 50% 50%;
   }
   10% {
@@ -231,37 +228,38 @@ h1 {
 }
 
 @media (prefers-reduced-motion) {
-  .sphere {
+  .square--henna, .square--ingrid {
     -webkit-animation: none;
             animation: none;
   }
-  .tsquare {
+  .square--thomas {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
   }
-  .iball {
-    -webkit-animation: none;
-            animation: none;
+  .square--ingrid {
     -webkit-box-shadow: 5px 10px 8px black;
             box-shadow: 5px 10px 8px black;
   }
 }
 
 @media (prefers-reduced-motion) and (orientation: landscape) {
-  .iball {
+  .square--ingrid {
     height: 15vw;
     width: 15vw;
   }
 }
 
 @media (orientation: portrait) {
-  .tsquare {
+  .square--thomas, .square--henna {
     width: 100%;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .iball {
+@media (prefers-color-scheme: light) {
+  main {
+    background-color: #e2e0d4;
+  }
+  .square--ingrid {
     background-color: #b388ce;
   }
   @-webkit-keyframes bounce {
@@ -288,46 +286,9 @@ h1 {
               transform: translateY(0px);
     }
   }
-}
-
-@media (prefers-color-scheme: light) {
-  main {
-    background-color: lightgrey;
-  }
-  .tsquare {
+  .square--thomas {
     background: gray;
     color: black;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #333;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: lightgrey;
-  }
-}
-
-@media (orientation: landscape) {
-  body {
-    background-color: #333;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    background-color: white;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .content {
-    background-color: #333;
-    color: white;
   }
 }
 /*# sourceMappingURL=index.css.map */

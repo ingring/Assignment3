@@ -13,17 +13,17 @@
         height: 60px; 
         width: 120; 
         transform: translateY(70vh); 
-        background-color: map.get($iball, "secondary");
+        background-color: map-get($square--ingrid, "background__secondary");
     }
-    
+
     100% {
         transform: translateY(0px); 
-        background-color: map.get($iball, "primary")
+        background-color: map-get($square--ingrid, "background__primary");
     }
 }
 
 @keyframes sphere {
-    0% {background-color: red; border-radius: 50% 50%;}
+    0% {background-color: map-get($square--henna, "background__primary"); border-radius: 50% 50%;}
     10% {background-color: orange;}
     20% {background-color: yellow;}
     30% {background-color: lightgreen;}

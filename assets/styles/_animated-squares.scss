@@ -1,18 +1,16 @@
-// Ingrid's square
-.iball {
+.square--ingrid {
   height: 100px;
   width: 100px;
   position: relative;
-  background-color: map.get($iball, "background__primary");
+  background-color: map-get($square--ingrid, "background__primary");
   border-radius: 50%;
   animation: bounce 10s linear 1s infinite;
 }
 
-/*Henna's square*/
-.sphere {
+.square--henna {
   width: 150px;
   height: 150px;
-  background-color: red;
+  background-color: map-get($square--henna, "background");
   border-radius: 50% 50%;
   position: relative;
   margin: 200px auto;
@@ -23,16 +21,15 @@
   animation-delay: 1s;
 }
 
-.sphere:hover {
+.square--henna:hover {
   opacity: 0;
   transition-duration: 2s;
   animation-play-state: paused;
 }
   
-/*Thomas's square*/
-.tsquare {
+.square--thomas {
   margin: 0 auto;
-  background: map.get($tsquare, "$background__dark");
+  background: map-get($square--thomas, "background__darkMode");
   animation: trotate 3s ease-in-out infinite 0s alternate none;
 
   border-radius: 50% / 33%;
