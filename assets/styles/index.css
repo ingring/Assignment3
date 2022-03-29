@@ -24,10 +24,13 @@ h1 {
   width: 100%;
 }
 
-#cover {
+#front .background {
   width: 100%;
   height: auto;
   position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 #slides {
@@ -35,7 +38,7 @@ h1 {
   position: absolute;
 }
 
-.slide {
+#slides .slide {
   height: 100vh;
   border: 1px solid red;
   background: transparent;

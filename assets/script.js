@@ -1,9 +1,3 @@
-// store background filenames in array
-const backgrounds = [];
-for (let i = 2; i <= 10; i++) {
-	backgrounds.push(`storyboard/img/background-img/scene${i}.JPEG`);
-}
-const cover_im = document.getElementById("cover");
 
 // add droplet sidebar droplets
 let sidebar = document.getElementById("drop_sidebar");
@@ -34,6 +28,20 @@ function update_sidebar(active_droplet) {
 	}
 }
 
+function update_background(slide) {
+	let images = document.querySelectorAll("#front .background");
+	// iterate backgrounds
+	for (let [i, bg] of Object.entries(images)) {
+		if (i == slide) {
+			// add ".active" to background
+			bg.classList.add("active");
+		}
+		else {
+			bg.classList.remove("active");
+		}
+	}
+}
+
 const observer = new IntersectionObserver(
 	function (entries, observer) {
 		entries.forEach((entry) => {
@@ -46,7 +54,7 @@ const observer = new IntersectionObserver(
 				console.log(slide_index);
 
 				// update background
-				cover_im.setAttribute("src", backgrounds[slide_index]);
+				update_background(slide_index);
 
 				// update sidebar droplets
 				update_sidebar(slide_index);

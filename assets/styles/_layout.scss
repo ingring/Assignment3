@@ -24,27 +24,28 @@ h1 {
     position: fixed;
     height: 100vh;
     width: 100%;
-    // filter:brightness(.5);
-}
 
-#cover {
-    width: 100%;
-    height: auto;
-    position: absolute;
+    .background {
+        width: 100%;
+        height: auto;
+        position: absolute;
+
+        // for smooth scene transition
+        opacity: 0;
+        transition: opacity 1s;
+    }
 }
 
 #slides {
     width: 100%;
     position: absolute;
+
+    .slide {
+        height: 100vh;
+        border: 1px solid red;
+        background: transparent;
+    }
 }
-
-.slide {
-    height: 100vh;
-    border: 1px solid red;
-    background: transparent;
-}
-
-
 
 // water droplet sidebar
 #drop_sidebar {
