@@ -4,20 +4,3 @@ $main: (
   "background": #333,
   "background__lightMode" : rgb(226, 224, 212),
 );
-
-$square--ingrid: (
-  "background__primary": #70BA9E,
-  "background__secondary": #4c894b,
-  "background__lightMode" : #b388ce,
-  "shadow": black,
-);
-
-$square--thomas: (
-  "background__darkMode": darkslateblue,
-  "background__lightMode": gray,
-  "text-color__lightMode" : black,
-);
-
-$square--henna: (
-  "background": red,
-);

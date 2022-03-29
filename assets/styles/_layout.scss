@@ -9,11 +9,36 @@ body {
 
 main {
     color: map-get($main, "text-color");
-    padding: 2em 4em;
+    // padding: 2em 4em;
     background-color: map-get($main, "background");
 }
 
 h1 {
     text-align: center;
     padding-bottom: 2rem;
+}
+
+
+
+#front {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    // filter:brightness(.5);
+}
+
+#cover {
+    width: 100%;
+    height: auto;
+}
+
+#slides {
+    width: 100%;
+    position: absolute;
+}
+
+.slide {
+    height: 100vh;
+    border: 1px solid red;
+    background: transparent;
 }
