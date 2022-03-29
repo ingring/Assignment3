@@ -1,54 +1,9 @@
-@media (prefers-reduced-motion) {
-    .square--henna, .square--ingrid {
-        animation: none;
-    }
-    
-    .square--thomas {
-        animation-play-state: paused;
-    }
+// @media (prefers-reduced-motion) {
 
-    .square--ingrid {
-      box-shadow: 5px 10px 8px map-get($square--ingrid, "shadow");
-    }
-    
-    //The user settings is on reduced motion and the orientation is landscape
-    @media (orientation: landscape) {
-      .square--ingrid {
-        height: 15vw;
-        width: 15vw;
-      }
-    }
-}
-
-@media (orientation: portrait) {
-    .square--thomas, .square--henna {
-        width: 100%;
-    }
-}
+// }
 
 @media (prefers-color-scheme: light) {
     main {
       background-color: map-get($main, "background__lightMode");
     }
-    
-    .square--ingrid {
-      background-color: map-get($square--ingrid, "background__lightMode");
-    }
-  
-    @keyframes bounce {
-      50% {
-        height: 60px; 
-        width: 120; 
-        transform: translateY(80vh);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
-    }
-    
-    .square--thomas {
-        background: map-get($square--thomas, "background__lightMode");
-        color: map-get($square--thomas, "text-color__lightMode");
-    }
-}
+  }
