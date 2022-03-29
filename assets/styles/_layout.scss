@@ -36,24 +36,51 @@ p {
     background-color: black;
 }
 
-#cover {
-    width: 100%;
-    height: auto;
+    .background {
+        width: 100%;
+        height: auto;
+        position: absolute;
+
+        // for smooth scene transition
+        opacity: 0;
+        transition: opacity 1s;
+    }
 }
 
 #slides {
     width: 100%;
     position: absolute;
+
+    .slide {
+        height: 100vh;
+        border: 1px solid red;
+        background: transparent;
+        
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+    }
 }
 
-.slide {
+// water droplet sidebar
+#drop_sidebar {
+    width: 7%;
     height: 100vh;
-    border: 1px solid red;
-    background: transparent;
-    
-    display: grid;
-    grid-template-columns: 50vw 50vw;
+    position: absolute;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .droplet {
+        max-height: 11vh;
+        max-width: 9vh;
+        transition: 1s all;
+        opacity: .33;
+    }
 }
+
+.active { opacity: 1 !important; }
+.hidden { opacity: 0 !important; }
 
 .logo {
     position: fixed;

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link href="assets/styles/index.css" rel="stylesheet">
 
     <title>Animated squares</title>
@@ -14,26 +14,39 @@
     <main>
 
       <section id="front">
-        <img id="cover" src="storyboard/img/background-img/scene2.JPEG" alt="">
+        <!-- covering background images -->
+        <img class="background" src="storyboard/img/background-img/scene2.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene3.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene4.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene5.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene6.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene7.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene8.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene9.JPEG" alt="">
+        <img class="background" src="storyboard/img/background-img/scene10.JPEG" alt="">
+
         <img class="logo" src="storyboard/img/logo.png" alt="">
+
+        <!-- droplets sidebar (scroll progress) -->
+        <div id="drop_sidebar"></div>
       </section>
 
       <div id="slides">
-        <section class="slide" data-slide="1">
+        <section class="slide" data-slide="0">
           <p>
             Water scarcity affects more than 40 percent of people, an alarming figure that is projected to rise as temperatures do. 
             Although 2.1 billion people have improved water sanitation since 1990, dwindling drinking water supplies are affecting every continent.
           </p>
         </section>
 
-        <section class="slide" data-slide="2">
+        <section class="slide" data-slide="1">
           <p>
             More and more countries are experiencing water stress, and increasing drought and desertification is already worsening these trends. 
             By 2050, it is projected that at least one in four people will suffer recurring water shortages.
           </p>
         </section>
 
-        <section class="slide" data-slide="3">
+        <section class="slide" data-slide="2">
           <p>
             71 percent of the global population, 5.2 billion people, had safely-managed drinking water in 2015, 
             but 844 million people still lacked even basic drinking water.
@@ -80,6 +93,7 @@
 
     </main>
 
+    <!-- JS -->
     <script src="assets/script.js"></script>
   </body>
 </html>

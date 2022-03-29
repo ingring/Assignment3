@@ -1,9 +1,3 @@
 // @media (prefers-reduced-motion) {
 
 // }
-
-@media (prefers-color-scheme: light) {
-    main {
-      background-color: map-get($main, "background__lightMode");
-    }
-  }
