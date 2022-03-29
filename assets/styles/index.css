@@ -24,9 +24,10 @@ h1 {
   width: 100%;
 }
 
-#front img {
+#cover {
   width: 100%;
   height: auto;
+  position: absolute;
 }
 
 #slides {
@@ -40,276 +41,41 @@ h1 {
   background: transparent;
 }
 
-.square--ingrid {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  background-color: #70BA9E;
-  border-radius: 50%;
-  -webkit-animation: bounce 10s linear 1s infinite;
-          animation: bounce 10s linear 1s infinite;
-}
-
-.square--henna {
-  width: 150px;
-  height: 150px;
-  background-color: red;
-  border-radius: 50% 50%;
-  position: relative;
-  margin: 200px auto;
-  -webkit-animation-name: sphere;
-          animation-name: sphere;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.square--henna:hover {
-  opacity: 0;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
-.square--thomas {
-  margin: 0 auto;
-  background: darkslateblue;
-  -webkit-animation: trotate 3s ease-in-out infinite 0s alternate none;
-          animation: trotate 3s ease-in-out infinite 0s alternate none;
-  border-radius: 50% / 33%;
-  width: 200px;
-  height: 200px;
+#drop_sidebar {
+  width: 7%;
+  height: 100vh;
+  position: absolute;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.square--thomas h2 {
-  font-family: "segoe ui";
+#drop_sidebar .droplet {
+  max-height: 11vh;
+  max-width: 9vh;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  opacity: .33;
 }
 
-@-webkit-keyframes bounce {
-  10% {
-    height: 100px;
-    width: 100px;
-  }
-  30% {
-    height: 100px;
-    width: 90px;
-  }
-  50% {
-    height: 60px;
-    width: 120;
-    -webkit-transform: translateY(70vh);
-            transform: translateY(70vh);
-    background-color: #4c894b;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    background-color: #70BA9E;
-  }
+.active {
+  opacity: 1 !important;
 }
 
-@keyframes bounce {
-  10% {
-    height: 100px;
-    width: 100px;
-  }
-  30% {
-    height: 100px;
-    width: 90px;
-  }
-  50% {
-    height: 60px;
-    width: 120;
-    -webkit-transform: translateY(70vh);
-            transform: translateY(70vh);
-    background-color: #4c894b;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    background-color: #70BA9E;
-  }
-}
-
-@-webkit-keyframes sphere {
-  0% {
-    border-radius: 50% 50%;
-  }
-  10% {
-    background-color: orange;
-  }
-  20% {
-    background-color: yellow;
-  }
-  30% {
-    background-color: lightgreen;
-  }
-  40% {
-    background-color: green;
-  }
-  50% {
-    background-color: navy;
-    border-radius: 0;
-  }
-  60% {
-    background-color: blue;
-  }
-  70% {
-    background-color: pink;
-  }
-  80% {
-    background-color: orchid;
-  }
-  90% {
-    background-color: purple;
-  }
-  100% {
-    background-color: maroon;
-    border-radius: 50% 50%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes sphere {
-  0% {
-    border-radius: 50% 50%;
-  }
-  10% {
-    background-color: orange;
-  }
-  20% {
-    background-color: yellow;
-  }
-  30% {
-    background-color: lightgreen;
-  }
-  40% {
-    background-color: green;
-  }
-  50% {
-    background-color: navy;
-    border-radius: 0;
-  }
-  60% {
-    background-color: blue;
-  }
-  70% {
-    background-color: pink;
-  }
-  80% {
-    background-color: orchid;
-  }
-  90% {
-    background-color: purple;
-  }
-  100% {
-    background-color: maroon;
-    border-radius: 50% 50%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes trotate {
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(540deg);
-            transform: rotateZ(540deg);
-  }
-}
-
-@keyframes trotate {
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(540deg);
-            transform: rotateZ(540deg);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .square--henna, .square--ingrid {
-    -webkit-animation: none;
-            animation: none;
-  }
-  .square--thomas {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-  .square--ingrid {
-    -webkit-box-shadow: 5px 10px 8px black;
-            box-shadow: 5px 10px 8px black;
-  }
-}
-
-@media (prefers-reduced-motion) and (orientation: landscape) {
-  .square--ingrid {
-    height: 15vw;
-    width: 15vw;
-  }
-}
-
-@media (orientation: portrait) {
-  .square--thomas, .square--henna {
-    width: 100%;
-  }
+.hidden {
+  opacity: 0 !important;
 }
 
 @media (prefers-color-scheme: light) {
   main {
     background-color: #e2e0d4;
-  }
-  .square--ingrid {
-    background-color: #b388ce;
-  }
-  @-webkit-keyframes bounce {
-    50% {
-      height: 60px;
-      width: 120;
-      -webkit-transform: translateY(80vh);
-              transform: translateY(80vh);
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
-  @keyframes bounce {
-    50% {
-      height: 60px;
-      width: 120;
-      -webkit-transform: translateY(80vh);
-              transform: translateY(80vh);
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
-  .square--thomas {
-    background: gray;
-    color: black;
   }
 }
 /*# sourceMappingURL=index.css.map */
