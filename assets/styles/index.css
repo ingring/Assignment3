@@ -32,13 +32,11 @@ p {
   width: 100%;
   background-color: black;
 }
-
 #front .background {
   width: 100%;
   height: auto;
   position: absolute;
   opacity: 0;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 
@@ -46,7 +44,6 @@ p {
   width: 100%;
   position: absolute;
 }
-
 #slides .slide {
   height: 100vh;
   border: 1px solid red;
@@ -55,33 +52,20 @@ p {
   grid-template-columns: 50vw 50vw;
 }
 
-.logo {
-  position: fixed;
-  max-width: 5vw;
-}  
-  
 #drop_sidebar {
   width: 7%;
   height: 100vh;
   position: absolute;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 #drop_sidebar .droplet {
   max-height: 11vh;
   max-width: 9vh;
-  -webkit-transition: 1s all;
   transition: 1s all;
-  opacity: .33;
+  opacity: 0.33;
 }
 
 .active {
@@ -92,9 +76,8 @@ p {
   opacity: 0 !important;
 }
 
-@media (prefers-color-scheme: light) {
-  main {
-    background-color: #e2e0d4;
-  }
-}  
-/*# sourceMappingURL=index.css.map */
+.logo {
+  max-width: 5vw;
+  display: flex;
+  justify-self: right;
+}/*# sourceMappingURL=index.css.map */

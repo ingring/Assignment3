@@ -34,7 +34,6 @@ p {
     // filter:brightness(.5);
 
     background-color: black;
-}
 
     .background {
         width: 100%;
@@ -83,6 +82,7 @@ p {
 .hidden { opacity: 0 !important; }
 
 .logo {
-    position: fixed;
     max-width: 5vw;
+    display: flex;
+    justify-self: right;
 }
