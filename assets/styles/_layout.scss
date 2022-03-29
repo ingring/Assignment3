@@ -13,17 +13,28 @@ main {
     background-color: map-get($main, "background");
 }
 
-h1 {
+h2 {
     text-align: center;
     padding-bottom: 2rem;
 }
 
+p {
+    max-width: 60ch;
+    margin: 0 auto;
+}
 
+.slide:nth-child(odd) > p {
+    grid-column: 2;
+}
 
 #front {
     position: fixed;
     height: 100vh;
     width: 100%;
+    // filter:brightness(.5);
+
+    background-color: black;
+}
 
     .background {
         width: 100%;
@@ -44,6 +55,9 @@ h1 {
         height: 100vh;
         border: 1px solid red;
         background: transparent;
+        
+        display: grid;
+        grid-template-columns: 50vw 50vw;
     }
 }
 
@@ -51,7 +65,6 @@ h1 {
 #drop_sidebar {
     width: 7%;
     height: 100vh;
-
     position: absolute;
     padding: 1rem;
     display: flex;
@@ -68,3 +81,8 @@ h1 {
 
 .active { opacity: 1 !important; }
 .hidden { opacity: 0 !important; }
+
+.logo {
+    position: fixed;
+    max-width: 5vw;
+}

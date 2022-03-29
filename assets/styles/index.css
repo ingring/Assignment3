@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,15 +12,25 @@ main {
   background-color: #333;
 }
 
-h1 {
+h2 {
   text-align: center;
   padding-bottom: 2rem;
+}
+
+p {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.slide:nth-child(odd) > p {
+  grid-column: 2;
 }
 
 #front {
   position: fixed;
   height: 100vh;
   width: 100%;
+  background-color: black;
 }
 
 #front .background {
@@ -42,8 +51,15 @@ h1 {
   height: 100vh;
   border: 1px solid red;
   background: transparent;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
 }
 
+.logo {
+  position: fixed;
+  max-width: 5vw;
+}  
+  
 #drop_sidebar {
   width: 7%;
   height: 100vh;
@@ -80,5 +96,5 @@ h1 {
   main {
     background-color: #e2e0d4;
   }
-}
+}  
 /*# sourceMappingURL=index.css.map */

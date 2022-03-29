@@ -1,16 +1,3 @@
-@media (prefers-reduced-motion) {
-    //The user settings is on reduced motion and the orientation is landscape
-    @media (orientation: landscape) {
+// @media (prefers-reduced-motion) {
 
-    }
-}
-
-@media (orientation: portrait) {
-
-}
-
-@media (prefers-color-scheme: light) {
-    main {
-      background-color: map-get($main, "background__lightMode");
-    }
-}
+// }
