@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  font-family: "segoe ui";
 }
 
 main {
@@ -78,8 +78,8 @@ p {
 #drop_sidebar .droplet {
   max-height: 11vh;
   max-width: 9vh;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
   opacity: .33;
 }
 
@@ -92,10 +92,87 @@ p {
 }
 
 .logo {
-  max-width: 5vw;
+  position: absolute;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-self: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.logo img {
+  max-width: 8vw;
+  padding: 1rem;
+}
+
+#slides > section:nth-child(6) {
+  display: block;
+}
+
+#slides > section:nth-child(6) .content {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#slides > section:nth-child(6) .content h2 {
+  padding: 1.5rem;
+  background-color: #333;
+}
+
+@-webkit-keyframes droplet_falling {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 85vh;
+    opacity: 0;
+  }
+}
+
+@keyframes droplet_falling {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 85vh;
+    opacity: 0;
+  }
+}
+
+.droplet_scene {
+  position: absolute;
+}
+
+.droplet_scene img {
+  position: absolute;
+  width: 5vw;
+  opacity: 0;
+  -webkit-animation: droplet_falling 5s infinite linear;
+          animation: droplet_falling 5s infinite linear;
 }
 /*# sourceMappingURL=index.css.map */

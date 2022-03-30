@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    padding: 0;
+    font-family: $font__primary;
 }
 
 main {
@@ -31,7 +31,6 @@ p {
     position: fixed;
     height: 100vh;
     width: 100%;
-    // filter:brightness(.5);
 
     background-color: black;
 
@@ -73,7 +72,7 @@ p {
     .droplet {
         max-height: 11vh;
         max-width: 9vh;
-        transition: 1s all;
+        transition: 1s opacity;
         opacity: .33;
     }
 }
@@ -82,7 +81,60 @@ p {
 .hidden { opacity: 0 !important; }
 
 .logo {
-    max-width: 5vw;
+    position: absolute;
+    width: 100%;
+
     display: flex;
-    justify-self: right;
+    justify-content: flex-end;
+
+    img {
+        max-width: 8vw;
+        padding: 1rem;
+    }
+}
+
+// slide 6: animated water droplets
+#slides > section:nth-child(6) {
+    // to cancel grid display on this slide
+    display: block;
+
+    .content {
+        position: relative;
+
+        // center h2
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            padding: 1.5rem;
+            background-color: map-get($main, "background");
+        }
+    }
+}
+
+@keyframes droplet_falling {
+    0% {
+        margin-top: 0;
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% {
+        margin-top: 85vh;
+        opacity: 0;
+    }
+}
+
+.droplet_scene {
+    position: absolute;
+
+    img {
+        position: absolute;
+        width: 5vw;
+
+        opacity: 0;
+        animation: droplet_falling 5s infinite linear;
+    }
 }
