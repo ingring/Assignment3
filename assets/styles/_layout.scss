@@ -39,6 +39,8 @@ p {
         height: auto;
         position: absolute;
 
+        filter: brightness(.8);
+
         // for smooth scene transition
         opacity: 0;
         transition: opacity 1s;
@@ -47,13 +49,27 @@ p {
 
 #slides {
     width: 100%;
-    position: absolute;
+    position: relative;
+
+    #title_slide {
+        height: 100vh;
+        background-color: black;
+        position: relative;
+        z-index: 1;
+
+        // center image
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 33%;
+        }
+    }
 
     .slide {
         height: 100vh;
         border: 1px solid red;
-        background: transparent;
-        
         display: grid;
         grid-template-columns: 50vw 50vw;
     }
@@ -63,8 +79,9 @@ p {
 #drop_sidebar {
     width: 7%;
     height: 100vh;
-    position: absolute;
+    position: relative;
     padding: 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -94,7 +111,7 @@ p {
 }
 
 // slide 6: animated water droplets
-#slides > section:nth-child(6) {
+#slides > section:nth-child(7) {
     // to cancel grid display on this slide
     display: block;
 

@@ -39,6 +39,8 @@ p {
   width: 100%;
   height: auto;
   position: absolute;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -46,13 +48,32 @@ p {
 
 #slides {
   width: 100%;
-  position: absolute;
+  position: relative;
+}
+
+#slides #title_slide {
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#slides #title_slide img {
+  width: 33%;
 }
 
 #slides .slide {
   height: 100vh;
   border: 1px solid red;
-  background: transparent;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50vw 50vw;
@@ -62,7 +83,7 @@ p {
 #drop_sidebar {
   width: 7%;
   height: 100vh;
-  position: absolute;
+  position: relative;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,11 +128,11 @@ p {
   padding: 1rem;
 }
 
-#slides > section:nth-child(6) {
+#slides > section:nth-child(7) {
   display: block;
 }
 
-#slides > section:nth-child(6) .content {
+#slides > section:nth-child(7) .content {
   position: relative;
   height: 100vh;
   display: -webkit-box;
@@ -125,7 +146,7 @@ p {
           justify-content: center;
 }
 
-#slides > section:nth-child(6) .content h2 {
+#slides > section:nth-child(7) .content h2 {
   padding: 1.5rem;
   background-color: #333;
 }
