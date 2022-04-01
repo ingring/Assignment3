@@ -32,7 +32,7 @@ p {
     height: 100vh;
     width: 100%;
 
-    background-color: black;
+    background-color: $waterdrop__slide--h2;
 
     .background {
         width: 100%;
@@ -111,7 +111,7 @@ p {
 }
 
 // slide 6: animated water droplets
-#slides > section:nth-child(7) {
+#slides > section:nth-child(5) {
     // to cancel grid display on this slide
     display: block;
 
@@ -126,7 +126,7 @@ p {
 
         h2 {
             padding: 1.5rem;
-            background-color: map-get($main, "background");
+            background-color: $waterdrop__slide--h2;
         }
     }
 }

@@ -128,11 +128,11 @@ p {
   padding: 1rem;
 }
 
-#slides > section:nth-child(7) {
+#slides > section:nth-child(5) {
   display: block;
 }
 
-#slides > section:nth-child(7) .content {
+#slides > section:nth-child(5) .content {
   position: relative;
   height: 100vh;
   display: -webkit-box;
@@ -146,9 +146,9 @@ p {
           justify-content: center;
 }
 
-#slides > section:nth-child(7) .content h2 {
+#slides > section:nth-child(5) .content h2 {
   padding: 1.5rem;
-  background-color: #333;
+  background-color: black;
 }
 
 @-webkit-keyframes droplet_falling {

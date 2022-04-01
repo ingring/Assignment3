@@ -1,7 +1,7 @@
 
 // add droplet sidebar droplets
 let sidebar = document.getElementById("drop_sidebar");
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 6; i++) {
 	sidebar.innerHTML += `<img src="storyboard/img/waterdrops/white.png" alt="" class="droplet">`;
 }
 
