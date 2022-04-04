@@ -39,7 +39,7 @@ p {
         height: auto;
         position: absolute;
 
-        filter: brightness(.8);
+        filter: brightness(.5);
 
         // for smooth scene transition
         opacity: 0;
@@ -57,11 +57,6 @@ p {
         position: relative;
         z-index: 1;
 
-        // center image
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img {
             width: 33%;
         }
@@ -72,6 +67,11 @@ p {
         border: 1px solid red;
         display: grid;
         grid-template-columns: 50vw 50vw;
+    
+        .split_slide {
+            font-size: 1.1rem;
+            padding: 3rem;
+        }
     }
 }
 
@@ -96,6 +96,12 @@ p {
 
 .active { opacity: 1 !important; }
 .hidden { opacity: 0 !important; }
+.center {
+    // horizontally and vertically center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .logo {
     position: absolute;
@@ -117,12 +123,7 @@ p {
 
     .content {
         position: relative;
-
-        // center h2
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         h2 {
             padding: 1.5rem;

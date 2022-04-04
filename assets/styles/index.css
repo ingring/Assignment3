@@ -39,8 +39,8 @@ p {
   width: 100%;
   height: auto;
   position: absolute;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -56,15 +56,6 @@ p {
   background-color: black;
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #slides #title_slide img {
@@ -78,6 +69,11 @@ p {
   display: grid;
   -ms-grid-columns: 50vw 50vw;
       grid-template-columns: 50vw 50vw;
+}
+
+#slides .slide .split_slide {
+  font-size: 1.1rem;
+  padding: 3rem;
 }
 
 #drop_sidebar {
@@ -112,6 +108,18 @@ p {
   opacity: 0 !important;
 }
 
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .logo {
   position: absolute;
   width: 100%;
@@ -135,15 +143,6 @@ p {
 #slides > section:nth-child(5) .content {
   position: relative;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #slides > section:nth-child(5) .content h2 {
