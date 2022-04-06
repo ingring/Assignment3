@@ -2,7 +2,7 @@
 // add droplet sidebar droplets
 let sidebar = document.getElementById("drop_sidebar");
 for (let i = 0; i < 6; i++) {
-	sidebar.innerHTML += `<img src="storyboard/img/waterdrops/white.png" alt="" class="droplet">`;
+	sidebar.innerHTML += `<img src="assets/img/waterdrops/white.png" alt="" class="droplet">`;
 }
 
 // add droplets to droplet- animated scenes
@@ -12,7 +12,7 @@ for (let droplet_scene of document.getElementsByClassName("droplet_scene")) {
 		let delay = Math.floor(Math.random() * 5000);
 		// random start position from 5 to 90vw
 		let x = Math.floor(Math.random() * 85) + 5;
-		droplet_scene.innerHTML += `<img style="margin-left: ${x}vw; animation-delay: ${delay}ms;" src="storyboard/img/waterdrops/white.png" alt="">`;
+		droplet_scene.innerHTML += `<img style="margin-left: ${x}vw; animation-delay: ${delay}ms;" src="assets/img/waterdrops/white.png" alt="">`;
 	}
 }
 
