@@ -1,7 +1,21 @@
-// spraybottle
+#spraybottle {
+    fill: white;
+}
+
+.spray {
+    opacity: 0;
+    position: relative;
+    animation: spray 2s infinite;
+}
+
+.handle {
+    transform: rotate(-25deg);
+    transform-origin: 50% 35%;
+    animation: handle 2s infinite;
+}
+
 @keyframes spray {
     25%{opacity: 0; transform: translateX(0) }
-    30%{opacity: .2;}
     50%{opacity: 1; transform: translateX(0) }
     100%{opacity: 0; transform: translateX(-2vw) }
 }
