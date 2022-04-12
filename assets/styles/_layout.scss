@@ -172,3 +172,27 @@ figure {
         animation: droplet_falling 5s infinite linear;
     }
 }
+
+#trashcan {
+    width: 50%;
+
+    path {
+        fill: map-get($main, "text-color");
+        fill-opacity: .5;
+
+        // trash can lid
+        &:nth-child(1) {
+            transform-origin: center right;
+        }
+    }
+}
+
+#trashbag {
+    width: 50%;
+    position: absolute;
+
+    margin-top: 15vh;
+    padding: 10vh 0 0 40vw;
+
+    transform: translateX(-20vw) rotateZ(-90deg);
+}

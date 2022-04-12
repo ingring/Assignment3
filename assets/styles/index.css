@@ -210,6 +210,29 @@ figure figcaption {
           animation: droplet_falling 5s infinite linear;
 }
 
+#trashcan {
+  width: 50%;
+}
+
+#trashcan path {
+  fill: white;
+  fill-opacity: .5;
+}
+
+#trashcan path:nth-child(1) {
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+
+#trashbag {
+  width: 50%;
+  position: absolute;
+  margin-top: 15vh;
+  padding: 10vh 0 0 40vw;
+  -webkit-transform: translateX(-20vw) rotateZ(-90deg);
+          transform: translateX(-20vw) rotateZ(-90deg);
+}
+
 @-webkit-keyframes spray {
   25% {
     opacity: 0;
