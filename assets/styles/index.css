@@ -227,6 +227,7 @@ figure figcaption {
 #trashbag {
   width: 50%;
   position: absolute;
+  opacity: .75;
   margin-top: 15vh;
   padding: 10vh 0 0 40vw;
   -webkit-transform: translateX(-20vw) rotateZ(-90deg);
