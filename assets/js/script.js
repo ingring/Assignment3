@@ -53,34 +53,17 @@ function update_background(slide) {
 	}
 }
 
-const observer = new IntersectionObserver(
-	function (entries, observer) {
-		entries.forEach((entry) => {
+// scrollama functionality for generic slide rendering
+const slide_scroller = scrollama()
+	.setup({
+		step: ".slide"
+	})
+	.onStepEnter(r => {
+		let slide_index = r.element.dataset.slide;
 
-			if (entry.isIntersecting) {
-				// observer.unobserve(entry.target);
+		// update background
+		update_background(slide_index);
 
-				// log what slide number this is
-				let slide_index = entry.target.getAttribute("data-slide");
-				console.log(slide_index);
-
-				// update background
-				update_background(slide_index);
-
-				// update sidebar droplets
-				update_sidebar(slide_index);
-
-			}
-
-		});
-	}, 
-	{
-		treshold: 0,
-		rootMargin: "-250px"
-	}
-);
-
-// observer.observe(document.querySelector(".slide"));
-for (let slide of document.getElementsByClassName("slide")) {
-	observer.observe(slide);
-}
+		// update sidebar droplets
+		update_sidebar(slide_index);
+	})
