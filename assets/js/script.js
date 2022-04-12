@@ -93,5 +93,19 @@ const slide_scroller = scrollama()
 			case 2:
 				scroll_number(r.progress, 0.33, 39, r.element);
 				break;
+
+			// fifth slide animation
+			case 4:
+				let anim_progress = Math.min(r.progress / .5, 1);
+
+				// animate trash bag
+				let rotation = `translateX(-20vw) rotateZ(${anim_progress * 90 - 90}deg)`;
+				document.getElementById("trashbag").style.transform = rotation;
+
+				// animate trash can lid
+				let lid_rotation = `rotateZ(${Math.sin(anim_progress * Math.PI) * 45}deg)`;
+				document.querySelector("#trashcan path:nth-child(1)").style.transform = lid_rotation;
+				break;
 		}
+
 	})
