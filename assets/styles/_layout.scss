@@ -11,6 +11,7 @@ main {
     color: map-get($main, "text-color");
     // padding: 2em 4em;
     background-color: map-get($main, "background");
+    overflow-x: hidden;
 }
 
 h2 {
