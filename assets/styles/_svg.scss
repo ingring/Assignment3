@@ -1,17 +1,68 @@
 #spraybottle {
     fill: white;
     opacity: .8;
+    width: 20vh;
+    margin: 0 3rem;
     // transform: rotate(-5deg);
+
+    .spray {
+        opacity: 0;
+        position: relative;
+        animation: spray 2s infinite;
+    }
+
+    .handle {
+        transform: rotate(-25deg);
+        transform-origin: 50% 15%;
+        animation: handle 2s infinite;
+    }
+
+    .spraybottle__text {
+        font-size: 10em;
+        fill: black;
+    }
 }
 
-.spray {
-    opacity: 0;
+#persons {
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    animation: wave 4s ease-in-out infinite;
+    
+    .person {
+    fill: white;
+    width: 20%;
     position: relative;
-    animation: spray 2s infinite;
-}
+    }
 
-.handle {
-    transform: rotate(-25deg);
-    transform-origin: 50% 35%;
-    animation: handle 2s infinite;
+    .person--opacity {
+    opacity: 0.5;
+    }
+  }
+
+#bathtub {
+    fill: white;
+    max-width: 20vw;
+    margin: 0 2rem;
+
+    .wave {
+        opacity: .8;
+        animation: wave 10s ease-in-out infinite;
+        }
+    
+    .tub {
+        fill: transparent;
+        stroke: white;
+        stroke-miterlimit:10;
+        stroke-width: 20px;
+    }
+
+    .bubbles {
+        animation: bubbles 30s ease-in-out infinite;
+        opacity: .8;
+    }
+
+    .bubbles:nth-child(odd) {
+        animation: bubbles 30s ease-in-out infinite 5s;
+    }
 }

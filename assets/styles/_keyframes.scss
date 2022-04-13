@@ -3,11 +3,37 @@
     25%{opacity: 0; transform: translateX(0) }
     30%{opacity: .2;}
     50%{opacity: 1; transform: translateX(0) }
-    100%{opacity: 0; transform: translateX(-2vw) }
+    100%{opacity: 0; transform: translateX(-1.2vw) }
 }
 
 @keyframes handle {
     0%{transform: rotate(0);}
     50%{transform: rotate(-25deg);}
     100%{transform: rotate(0);}
+}
+
+// bathtub
+@keyframes wave {
+	0%,100% {
+		clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
+	}
+
+	50%{
+		clip-path: polygon(0 63%, 14% 57%, 25% 50%, 40% 42%, 56% 40%, 71% 44%, 84% 50%, 100% 60%, 100% 100%, 0% 100%);
+	}
+}
+
+@keyframes bubbles {
+    25% {
+        transform: translate(4vw, 6vw) scale(90%);
+        opacity: .5;
+    }
+    50% {
+        transform: translate(2vw, 2vw) scale(100%);
+        opacity: .8;
+    }
+    70% {
+        transform: translate(6vw, 4vw) scale(90%);
+        opacity: .5;
+    }
 }
