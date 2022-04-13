@@ -10,6 +10,7 @@ body {
 main {
   color: white;
   background-color: #333;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -59,6 +60,8 @@ p {
 #slides .slide .split_slide {
   font-size: 1.1rem;
   padding: 3rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 #slides .slide:nth-child(odd) > p {
   grid-column: 2;
@@ -173,6 +176,30 @@ figure figcaption {
   opacity: 0;
   -webkit-animation: droplet_falling 5s infinite linear;
           animation: droplet_falling 5s infinite linear;
+}
+
+#trashcan {
+  width: 50%;
+}
+
+#trashcan path {
+  fill: white;
+  fill-opacity: .5;
+}
+
+#trashcan path:nth-child(1) {
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+
+#trashbag {
+  width: 50%;
+  position: absolute;
+  opacity: .75;
+  margin-top: 15vh;
+  padding: 10vh 0 0 40vw;
+  -webkit-transform: translateX(-20vw) rotateZ(-90deg);
+          transform: translateX(-20vw) rotateZ(-90deg);
 }
 
 @-webkit-keyframes spray {

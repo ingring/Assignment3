@@ -11,6 +11,7 @@ main {
     color: map-get($main, "text-color");
     // padding: 2em 4em;
     background-color: map-get($main, "background");
+    overflow-x: hidden;
 }
 
 h2 {
@@ -67,6 +68,7 @@ p {
         .split_slide {
             font-size: 1.1rem;
             padding: 3rem;
+            transition: opacity 1s;
         }
     }
 
@@ -172,4 +174,29 @@ figure {
         opacity: 0;
         animation: droplet_falling 5s infinite linear;
     }
+}
+
+#trashcan {
+    width: 50%;
+
+    path {
+        fill: map-get($main, "text-color");
+        fill-opacity: .5;
+
+        // trash can lid
+        &:nth-child(1) {
+            transform-origin: center right;
+        }
+    }
+}
+
+#trashbag {
+    width: 50%;
+    position: absolute;
+
+    opacity: .75;
+    margin-top: 15vh;
+    padding: 10vh 0 0 40vw;
+
+    transform: translateX(-20vw) rotateZ(-90deg);
 }

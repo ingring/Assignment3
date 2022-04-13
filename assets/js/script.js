@@ -53,17 +53,61 @@ function update_background(slide) {
 	}
 }
 
+function scroll_number(progress, final_progress, value, elem) {
+	// update a scroll-progress dependant number using scrollama
+	// the animated display-number
+	let anim_value = Math.floor(Math.min(progress / final_progress, 1) * value);
+
+	// update number
+	let number_elem = elem.getElementsByClassName("number")[0];
+	number_elem.textContent = `${anim_value}%`;
+
+	// make text visible when number finished animation
+	if (anim_value == value) {
+		for (let text_elem of elem.getElementsByClassName("hidden")) {
+			text_elem.classList.remove("hidden");
+		}
+	}
+}
+
 // scrollama functionality for generic slide rendering
 const slide_scroller = scrollama()
 	.setup({
-		step: ".slide"
+		step: ".slide",
+		progress: true
 	})
 	.onStepEnter(r => {
-		let slide_index = r.element.dataset.slide;
-
 		// update background
-		update_background(slide_index);
+		update_background(r.index);
 
 		// update sidebar droplets
-		update_sidebar(slide_index);
+		update_sidebar(r.index);
+	})
+	.onStepProgress(r => {
+
+		switch (r.index) {
+			// first slide animation
+			case 0:
+				scroll_number(r.progress, 0.33, 40, r.element);
+				break;
+
+			// third slide animation
+			case 2:
+				scroll_number(r.progress, 0.33, 39, r.element);
+				break;
+
+			// fifth slide animation
+			case 4:
+				let anim_progress = Math.min(r.progress / .5, 1);
+
+				// animate trash bag
+				let rotation = `translateX(-20vw) rotateZ(${anim_progress * 90 - 90}deg)`;
+				document.getElementById("trashbag").style.transform = rotation;
+
+				// animate trash can lid
+				let lid_rotation = `rotateZ(${Math.sin(anim_progress * Math.PI) * 45}deg)`;
+				document.querySelector("#trashcan path:nth-child(1)").style.transform = lid_rotation;
+				break;
+		}
+
 	})
