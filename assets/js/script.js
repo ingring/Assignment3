@@ -55,15 +55,19 @@ function update_background(slide) {
 
 function scroll_number(progress, final_progress, value, elem) {
 	// update a scroll-progress dependant number using scrollama
-
 	// the animated display-number
 	let anim_value = Math.floor(Math.min(progress / final_progress, 1) * value);
-	// space-pad the number (requires html white space to not collapse)
-	// anim_value = anim_value.toString().padStart(2);
 
 	// update number
 	let number_elem = elem.getElementsByClassName("number")[0];
 	number_elem.textContent = `${anim_value}%`;
+
+	// make text visible when number finished animation
+	if (anim_value == value) {
+		for (let text_elem of elem.getElementsByClassName("hidden")) {
+			text_elem.classList.remove("hidden");
+		}
+	}
 }
 
 // scrollama functionality for generic slide rendering
@@ -73,13 +77,11 @@ const slide_scroller = scrollama()
 		progress: true
 	})
 	.onStepEnter(r => {
-		let slide_index = r.element.dataset.slide;
-
 		// update background
-		update_background(slide_index);
+		update_background(r.index);
 
 		// update sidebar droplets
-		update_sidebar(slide_index);
+		update_sidebar(r.index);
 	})
 	.onStepProgress(r => {
 

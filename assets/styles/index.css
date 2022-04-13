@@ -70,6 +70,8 @@ p {
 #slides .slide .split_slide {
   font-size: 1.1rem;
   padding: 3rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 #slides .slide:nth-child(odd) > p {
