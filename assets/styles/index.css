@@ -53,14 +53,12 @@ p {
 }
 #slides .slide {
   height: 100vh;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 50vw 50vw;
 }
 #slides .slide .split_slide {
   font-size: 1.1rem;
   padding: 3rem;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 #slides .slide:nth-child(odd) > p {
@@ -98,13 +96,14 @@ p {
 }
 
 figure .number {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", "sans-serif";
   font-weight: bolder;
   font-size: 10em;
   color: rgba(255, 255, 255, 0.5);
   -webkit-text-stroke: 2px white;
   text-align: center;
   position: relative;
+  display: inline-block;
 }
 figure figcaption {
   text-align: center;
@@ -132,6 +131,14 @@ figure figcaption {
 #slides > section:nth-child(5) .content h2 {
   padding: 1.5rem;
   background-color: black;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  max-width: 47ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid white;
+  -webkit-animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
+          animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
 }
 
 @-webkit-keyframes droplet_falling {
@@ -181,25 +188,21 @@ figure figcaption {
 #trashcan {
   width: 50%;
 }
-
 #trashcan path {
   fill: white;
-  fill-opacity: .5;
+  fill-opacity: 0.5;
 }
-
 #trashcan path:nth-child(1) {
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  transform-origin: center right;
 }
 
 #trashbag {
   width: 50%;
   position: absolute;
-  opacity: .75;
+  opacity: 0.75;
   margin-top: 15vh;
   padding: 10vh 0 0 40vw;
-  -webkit-transform: translateX(-20vw) rotateZ(-90deg);
-          transform: translateX(-20vw) rotateZ(-90deg);
+  transform: translateX(-20vw) rotateZ(-90deg);
 }
 
 @-webkit-keyframes spray {
@@ -259,6 +262,38 @@ figure figcaption {
     transform: rotate(0);
   }
 }
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blinking-cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+@keyframes blinking-cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
 @-webkit-keyframes wave {
   0%, 100% {
     -webkit-clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
@@ -307,11 +342,17 @@ figure figcaption {
     opacity: 0.5;
   }
 }
+@media (prefers-reduced-motion) {
+  .spray, .handle, .bubbles {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 #spraybottle {
   fill: white;
   opacity: 0.8;
-  width: 20vh;
-  margin: 0 3rem;
+  width: 15vh;
+  transform: rotate(-5deg);
 }
 #spraybottle .spray {
   opacity: 0;
@@ -331,15 +372,12 @@ figure figcaption {
 }
 
 #persons {
-  opacity: 0.8;
   display: flex;
   justify-content: center;
-  -webkit-animation: wave 4s ease-in-out infinite;
-          animation: wave 4s ease-in-out infinite;
 }
 #persons .person {
   fill: white;
-  width: 20%;
+  width: 6vw;
   position: relative;
 }
 #persons .person--opacity {
@@ -348,7 +386,7 @@ figure figcaption {
 
 #bathtub {
   fill: white;
-  max-width: 20vw;
+  width: 25vw;
   margin: 0 2rem;
 }
 #bathtub .wave {
