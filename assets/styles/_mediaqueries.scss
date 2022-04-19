@@ -1,3 +1,9 @@
-// @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
+    .spray, .handle, .bubbles {
+        animation: none;
+    }
+}
 
-// }
+@media (orientation: portrait) {
+    
+}

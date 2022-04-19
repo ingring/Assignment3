@@ -61,7 +61,7 @@ p {
 
     .slide {
         height: 100vh;
-        border: 1px solid red;
+        // border: 1px solid red;
         display: grid;
         grid-template-columns: 50vw 50vw;
     
@@ -107,15 +107,16 @@ p {
 
 figure {
     .number {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $font__number;
         font-weight: bolder;
         font-size: 10em;
         color: rgba(255, 255, 255, 0.5);
-        -webkit-text-stroke: 2px white; 
+        -webkit-text-stroke: 2px map-get($main, "text-color"); 
         text-align: center;
         position: relative;
+        display: inline-block;
     }
-    
+
     figcaption {
         text-align: center;
         font-size: 1.5em;
@@ -147,6 +148,16 @@ figure {
         h2 {
             padding: 1.5rem;
             background-color: $waterdrop__slide--h2;
+
+            // typewriter effect
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            max-width: 47ch;
+            overflow: hidden; 
+            white-space: nowrap; 
+            border-right: .15em solid map-get($main, "text-color"); 
+            animation: typing 5s steps(40, end), 
+            blinking-cursor .75s step-end infinite;
         }
     }
 }
