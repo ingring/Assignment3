@@ -35,7 +35,8 @@ p {
   position: absolute;
   filter: brightness(0.5);
   opacity: 0;
-  transition: opacity 1s;
+  transform: scale(1.2);
+  transition: opacity 1s, transform 50s;
 }
 
 #slides {

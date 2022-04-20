@@ -40,7 +40,8 @@ p {
 
         // for smooth scene transition
         opacity: 0;
-        transition: opacity 1s;
+        transform: scale(1.2);
+        transition: opacity 1s, transform 50s;
     }
 }
 
