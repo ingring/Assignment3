@@ -175,7 +175,7 @@ figure .number {
 }
 
 figure .motion_number {
-  visibility: hidden;
+  display: none;
 }
 
 figure figcaption {
@@ -471,7 +471,6 @@ figure figcaption {
   }
   .motion_number {
     display: inline-block !important;
-    visibility: visible !important;
   }
 }
 
