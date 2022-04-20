@@ -122,7 +122,7 @@ figure {
 
     // invisible number (unless reduced motion is preferred)
     .motion_number {
-        visibility: hidden;
+        display: none;
     }
 
     figcaption {
