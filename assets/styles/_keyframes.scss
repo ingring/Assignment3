@@ -1,3 +1,17 @@
+// falling droplets scene animation
+@keyframes droplet_falling {
+    0% {
+        margin-top: 0;
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% {
+        margin-top: 85vh;
+        opacity: 0;
+    }
+}
+
 // spraybottle
 @keyframes spray {
     25%{opacity: 0; transform: translateX(0) }

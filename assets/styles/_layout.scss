@@ -166,19 +166,6 @@ figure {
     }
 }
 
-@keyframes droplet_falling {
-    0% {
-        margin-top: 0;
-        opacity: 0;
-    }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% {
-        margin-top: 85vh;
-        opacity: 0;
-    }
-}
-
 .droplet_scene {
     position: absolute;
 

@@ -184,6 +184,18 @@ figure figcaption {
           animation-play-state: paused;
 }
 
+.droplet_scene {
+  position: absolute;
+}
+
+.droplet_scene img {
+  position: absolute;
+  width: 5vw;
+  opacity: 0;
+  -webkit-animation: droplet_falling 5s infinite linear;
+          animation: droplet_falling 5s infinite linear;
+}
+
 @-webkit-keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -216,18 +228,6 @@ figure figcaption {
     margin-top: 85vh;
     opacity: 0;
   }
-}
-
-.droplet_scene {
-  position: absolute;
-}
-
-.droplet_scene img {
-  position: absolute;
-  width: 5vw;
-  opacity: 0;
-  -webkit-animation: droplet_falling 5s infinite linear;
-          animation: droplet_falling 5s infinite linear;
 }
 
 @-webkit-keyframes spray {
