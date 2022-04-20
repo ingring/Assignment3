@@ -1,7 +1,8 @@
 
 // add droplet sidebar droplets
 let sidebar = document.getElementById("drop_sidebar");
-for (let i = 0; i < 6; i++) {
+let droplet_count = document.querySelectorAll(".slide").length;
+for (let i = 0; i < droplet_count; i++) {
 	sidebar.innerHTML += `<img src="assets/img/waterdrops/white.png" alt="" class="droplet">`;
 }
 
@@ -84,7 +85,7 @@ const slide_scroller = scrollama()
 		update_sidebar(r.index);
 
 		// play typewriter animation
-		if (r.index == 3) {
+		if (r.index == 4) {
 			let h2 = r.element.querySelector(".typewriter h2");
 			h2.style.animationPlayState = "running";
 		}
@@ -92,18 +93,18 @@ const slide_scroller = scrollama()
 	.onStepProgress(r => {
 
 		switch (r.index) {
-			// first slide animation
-			case 0:
+			// second slide animation
+			case 1:
 				scroll_number(r.progress, 0.33, 40, r.element);
 				break;
 
-			// third slide animation
-			case 2:
+			// fourth slide animation
+			case 3:
 				scroll_number(r.progress, 0.33, 39, r.element);
 				break;
 
-			// fifth slide animation
-			case 4:
+			// sixth slide animation
+			case 5:
 				let anim_progress = Math.min(r.progress / .5, 1);
 
 				// animate trash bag
