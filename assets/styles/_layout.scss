@@ -160,7 +160,7 @@ figure {
             white-space: nowrap; 
             border-right: .15em solid map-get($main, "text-color"); 
             animation: typing 5s steps(40, end), 
-            blinking-cursor .75s step-end infinite;
+                blinking-cursor .75s step-end infinite;
         }
     }
 }
@@ -188,29 +188,4 @@ figure {
         opacity: 0;
         animation: droplet_falling 5s infinite linear;
     }
-}
-
-#trashcan {
-    width: 50%;
-
-    path {
-        fill: map-get($main, "text-color");
-        fill-opacity: .5;
-
-        // trash can lid
-        &:nth-child(1) {
-            transform-origin: center right;
-        }
-    }
-}
-
-#trashbag {
-    width: 50%;
-    position: absolute;
-
-    opacity: .75;
-    margin-top: 15vh;
-    padding: 10vh 0 0 40vw;
-
-    transform: translateX(-20vw) rotateZ(-90deg);
 }
