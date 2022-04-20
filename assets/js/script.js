@@ -82,6 +82,12 @@ const slide_scroller = scrollama()
 
 		// update sidebar droplets
 		update_sidebar(r.index);
+
+		// play typewriter animation
+		if (r.index == 3) {
+			let h2 = r.element.querySelector(".typewriter h2");
+			h2.style.animationPlayState = "running";
+		}
 	})
 	.onStepProgress(r => {
 

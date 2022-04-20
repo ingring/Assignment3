@@ -161,6 +161,7 @@ figure {
             border-right: .15em solid map-get($main, "text-color"); 
             animation: typing 5s steps(40, end), 
                 blinking-cursor .75s step-end infinite;
+            animation-play-state: paused;
         }
     }
 }

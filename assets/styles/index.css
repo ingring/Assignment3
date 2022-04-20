@@ -180,6 +180,8 @@ figure figcaption {
   border-right: 0.15em solid white;
   -webkit-animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
           animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes droplet_falling {
