@@ -5,7 +5,11 @@
 }
 
 @media (orientation: portrait) {
-    
+    // make background scale to height in portrait mode
+    .background {
+        width: unset !important;
+        height: 100vh !important;
+    }
 }
 
 @media (prefers-color-scheme) {
