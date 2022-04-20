@@ -120,6 +120,11 @@ figure {
         display: inline-block;
     }
 
+    // invisible number (unless reduced motion is preferred)
+    .motion_number {
+        visibility: hidden;
+    }
+
     figcaption {
         text-align: center;
         font-size: 1.5em;

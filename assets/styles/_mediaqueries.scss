@@ -11,6 +11,34 @@
     }
 }
 
-@media (prefers-color-scheme) {
-    
+@media (prefers-color-scheme: light) {
+    // light theme config
+}
+
+@media (prefers-reduced-motion) {
+    * {
+        // pause animations
+        animation-play-state: paused !important;
+        // autocomplete animations (show last frame instead of first)
+        animation-direction: reverse !important;
+        // cancel all transitions
+        // transition: 0s !important;
+    }
+
+    // force the trashbag and trashcan lid to not move
+    #trashbag {
+        transform: translateX(-20vw) !important;
+    }
+    #trashcan path:nth-child(1) {
+        transform: rotateZ(0deg) !important;
+    }
+
+    // replace animated number with a static one
+    .number {
+        display: none !important;
+    }
+    .motion_number {
+        display: inline-block !important;
+        visibility: visible !important;
+    }
 }
