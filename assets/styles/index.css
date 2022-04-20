@@ -57,7 +57,7 @@ p {
   height: 100vh;
   background-color: black;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #slides #title_slide img {
@@ -65,6 +65,7 @@ p {
 }
 
 #slides .ocean {
+  z-index: 2;
   background-color: black;
   fill: black;
   -webkit-clip-path: path("M0,256L40,224C80,192,160,128,240,117.3C320,107,400,149,480,192C560,235,640,277,720,288C800,299,880,277,960,234.7C1040,192,1120,128,1200,106.7C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z");
@@ -184,7 +185,8 @@ figure figcaption {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,7 +197,7 @@ figure figcaption {
 }
 
 .logo img {
-  max-width: 8vw;
+  max-width: 10vw;
   padding: 1rem;
 }
 
