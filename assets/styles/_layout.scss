@@ -32,15 +32,17 @@ p {
     background-color: $waterdrop__slide--h2;
 
     .background {
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
 
+        background-size: cover;
+        background-position: center;
         filter: brightness(.5);
+        transform: scale(1.2);
 
         // for smooth scene transition
         opacity: 0;
-        transform: scale(1.2);
         transition: opacity 1s, transform 50s;
     }
 }

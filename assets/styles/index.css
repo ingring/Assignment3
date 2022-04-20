@@ -32,14 +32,16 @@ p {
 }
 
 #front .background {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  background-size: cover;
+  background-position: center;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
-  opacity: 0;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  opacity: 0;
   -webkit-transition: opacity 1s, -webkit-transform 50s;
   transition: opacity 1s, -webkit-transform 50s;
   transition: opacity 1s, transform 50s;
@@ -425,8 +427,7 @@ figure figcaption {
 
 @media (orientation: portrait) {
   .background {
-    width: unset !important;
-    height: 100vh !important;
+    background-size: auto;
   }
 }
 
