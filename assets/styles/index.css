@@ -203,16 +203,16 @@ figure figcaption {
   position: absolute;
 }
 
-#slides > section:nth-child(5) {
+#slides > section:nth-child(6) {
   display: block;
 }
 
-#slides > section:nth-child(5) .content {
+#slides > section:nth-child(6) .content {
   position: relative;
   height: 100vh;
 }
 
-#slides > section:nth-child(5) .content h2 {
+#slides > section:nth-child(6) .content h2 {
   padding: 1.5rem;
   background-color: black;
   margin: 0 auto;
