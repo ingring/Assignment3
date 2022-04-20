@@ -1,3 +1,4 @@
+// a spraybottle that sprays waterdrops
 #spraybottle {
     fill: $fill-color__svg;
     opacity: .8;
@@ -22,6 +23,7 @@
     }
 }
 
+// one of four persons statistic
 #persons {
     display: flex;
     justify-content: center;
@@ -37,6 +39,33 @@
     }
 }
 
+// a trashcan that moves trash inside the can when the user scrolls
+#trashcan {
+    width: 50%;
+
+    path {
+        fill: map-get($main, "text-color");
+        fill-opacity: .5;
+
+        // trash can lid
+        &:nth-child(1) {
+            transform-origin: center right;
+        }
+    }
+}
+
+#trashbag {
+    width: 50%;
+    position: absolute;
+
+    opacity: .75;
+    margin-top: 15vh;
+    padding: 10vh 0 0 40vw;
+
+    transform: translateX(-20vw) rotateZ(-90deg);
+}
+
+// a bathtub with waves and bubbles that moves 
 #bathtub {
     fill: $fill-color__svg;
     width: 25vw;
