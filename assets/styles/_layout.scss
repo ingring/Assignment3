@@ -24,6 +24,19 @@ p {
     margin: 0 auto;
 }
 
+.center {
+    // horizontally and vertically center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin center {
+    // horizontally and vertically center (mixin)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #front {
     position: fixed;
     height: 100vh;
@@ -52,13 +65,26 @@ p {
     position: relative;
 
     #title_slide {
+        @include center;
+
         height: 100vh;
         background-color: black;
         position: relative;
-        z-index: 2;
+        z-index: 3;
 
         img {
             width: 33%;
+            position: absolute;
+        }
+
+        #first-waterdrop {
+            position: fixed;
+            height: 20%;
+            transform: translateY(7vh);
+
+            path {
+                fill: rgb(191, 191, 191);
+            }
         }
     }
 
@@ -87,6 +113,7 @@ p {
         grid-template-columns: 50vw 50vw;
     
         .split_slide {
+            @include center;  // center content using mixin
             font-size: 1.1rem;
             padding: 3rem;
             transition: opacity 1s;
@@ -119,12 +146,6 @@ p {
 
 .active { opacity: 1 !important; }
 .hidden { opacity: 0 !important; }
-.center {
-    // horizontally and vertically center
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 figure {
     .number {
@@ -161,10 +182,6 @@ figure {
         max-width: 10vw;
         padding: 1rem;
     }
-}
-
-#first-waterdrop {
-    position: absolute;
 }
 
 // slide 6: animated water droplets
