@@ -1,8 +1,8 @@
 $main: (
-  "text-color": white,
+  "text-color": rgb(226, 224, 212),
   "text-color__lightMode": black,
-  "background": #333,
-  "background__lightMode" : rgb(226, 224, 212),
+  "background": #121212,
+  "background__lightMode": rgb(226, 224, 212),
 );
 
 
@@ -13,3 +13,12 @@ $waterdrop__slide--h2: black;
 // rgba(255, 255, 255, 0.5);
 $fill-color__svg: white;
 $stroke-color__number: white;
+
+
+// making global css variables for the places we want to change the value of the variable in media queries based on lightMode/darkMode
+:root {
+  --main__text-color: #{map-get($main, "background__lightMode")};
+  --main__bg-color: #{map-get($main, "background")};
+}
+
+// var(--main-color)
