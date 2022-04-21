@@ -1,6 +1,6 @@
-@import "_colors"; 
-@import "_fonts";
-@import "_layout";
-@import "_keyframes";
-@import "_mediaqueries";
-@import "_svg";
+@use "scss/colors"; 
+@use "scss/fonts";
+@use "scss/layout";
+@use "scss/keyframes";
+@use "scss/mediaqueries";
+@use "scss/svg";
