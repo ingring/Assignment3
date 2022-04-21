@@ -24,6 +24,18 @@ p {
   margin: 0 auto;
 }
 
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #front {
   position: fixed;
   height: 100vh;
@@ -54,14 +66,35 @@ p {
 }
 
 #slides #title_slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   background-color: black;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 #slides #title_slide img {
   width: 33%;
+  position: absolute;
+}
+
+#slides #title_slide #first-waterdrop {
+  position: fixed;
+  height: 20%;
+  -webkit-transform: translateY(7vh);
+          transform: translateY(7vh);
+}
+
+#slides #title_slide #first-waterdrop path {
+  fill: #bfbfbf;
 }
 
 #slides .ocean {
@@ -109,6 +142,15 @@ p {
 }
 
 #slides .slide .split_slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.1rem;
   padding: 3rem;
   -webkit-transition: opacity 1s;
@@ -152,18 +194,6 @@ p {
   opacity: 0 !important;
 }
 
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 figure .number {
   font-family: "Arial", "Helvetica", "sans-serif";
   font-weight: bolder;
@@ -199,10 +229,6 @@ figure figcaption {
 .logo img {
   max-width: 10vw;
   padding: 1rem;
-}
-
-#first-waterdrop {
-  position: absolute;
 }
 
 #slides > section:nth-child(6) {
