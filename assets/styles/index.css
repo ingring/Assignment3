@@ -18,6 +18,56 @@ main {
   overflow-x: hidden;
 }
 
+.title .water-pipes-text {
+  font: 10.5em "Arial";
+  max-width: 50vh;
+}
+.title .text-copy {
+  fill: transparent;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  -webkit-animation: stroke-offset 5.5s infinite linear;
+          animation: stroke-offset 5.5s infinite linear;
+}
+.title .text-copy:nth-child(1) {
+  stroke: #0099B4;
+  -webkit-animation-delay: -1;
+          animation-delay: -1;
+}
+.title .text-copy:nth-child(2) {
+  stroke: #63C8FF;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+.title .text-copy:nth-child(3) {
+  stroke: #2D779E;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+.title .text-copy:nth-child(4) {
+  stroke: #68C5E9;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+.title .text-copy:nth-child(5) {
+  stroke: none;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+@-webkit-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
 h2 {
   text-align: center;
   padding-bottom: 2rem;
@@ -410,6 +460,52 @@ figure figcaption {
 
   .motion_number {
     display: inline-block !important;
+  }
+}
+.water-pipes {
+  font: 10.5em "Arial";
+  max-width: 15vh;
+  margin-left: -25vw;
+  margin-top: -20vh;
+}
+.water-pipes .water-pipes__running-water {
+  fill: transparent;
+  stroke: rgb(226, 224, 212);
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  -webkit-animation: stroke-offset 5.5s infinite linear;
+          animation: stroke-offset 5.5s infinite linear;
+}
+.water-pipes .water-pipes__running-water:nth-child(1) {
+  stroke: #0099B4;
+  -webkit-animation-delay: -1;
+          animation-delay: -1;
+}
+.water-pipes .water-pipes__running-water:nth-child(2) {
+  stroke: #63C8FF;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+.water-pipes .water-pipes__running-water:nth-child(3) {
+  stroke: #2D779E;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+.water-pipes .water-pipes__running-water:nth-child(4) {
+  stroke: #68C5E9;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+.water-pipes .water-pipes__running-water:nth-child(5) {
+  stroke: none;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
   }
 }
 #spraybottle {

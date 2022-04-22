@@ -1,3 +1,50 @@
+.water-pipes {
+    font: 10.5em 'Arial';
+    max-width: 15vh;
+    margin-left: -25vw;
+    margin-top: -20vh;
+
+    .water-pipes__running-water {
+        fill: transparent;
+        stroke: map-get($main, "text-color");
+        stroke-dasharray: 6% 29%;
+        stroke-width: 5px;
+        stroke-dashoffset: 0%;
+        animation: stroke-offset 5.5s infinite linear;
+    }
+
+    .water-pipes__running-water:nth-child(1){
+    stroke: #0099B4;
+    animation-delay: -1;
+    }
+
+    .water-pipes__running-water:nth-child(2){
+    stroke: #63C8FF;
+    animation-delay: -2s;
+    }
+
+    .water-pipes__running-water:nth-child(3){
+    stroke: #2D779E;
+    animation-delay: -3s;
+    }
+
+    .water-pipes__running-water:nth-child(4){
+    stroke: #68C5E9;
+    animation-delay: -4s;
+    }
+
+    .water-pipes__running-water:nth-child(5){
+    stroke: none;
+    animation-delay: -5s;
+    }
+}
+    
+  
+  @keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+  }
+
+
 // a spraybottle that sprays waterdrops
 #spraybottle {
     fill: map-get($main, "text-color");
