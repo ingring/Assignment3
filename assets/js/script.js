@@ -84,12 +84,10 @@ const slide_scroller = scrollama()
 		// update sidebar droplets
 		update_sidebar(r.index);
 
-		switch (r.index) {
-			// play typewriter animation
-			case 4:
-				let h2 = r.element.querySelector(".typewriter h2");
-				h2.style.animationPlayState = "running";
-				break;
+		// play typewriter animation
+		if (r.index == 4) {
+			let h2 = r.element.querySelector(".typewriter h2");
+			h2.style.animationPlayState = "running";
 		}
 	})
 	.onStepProgress(r => {
