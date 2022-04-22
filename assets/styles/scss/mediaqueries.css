@@ -1,0 +1,35 @@
+@media (prefers-reduced-motion) {
+  .spray, .handle, .bubbles {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .background {
+    background-size: auto;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+    animation-direction: reverse !important;
+  }
+  #trashbag {
+    -webkit-transform: translateX(-20vw) !important;
+            transform: translateX(-20vw) !important;
+  }
+  #trashcan path:nth-child(1) {
+    -webkit-transform: rotateZ(0deg) !important;
+            transform: rotateZ(0deg) !important;
+  }
+  .number {
+    display: none !important;
+  }
+  .motion_number {
+    display: inline-block !important;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */
