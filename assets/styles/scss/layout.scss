@@ -24,12 +24,6 @@ p {
     margin: 0 auto;
 }
 
-.center {
-    // horizontally and vertically center
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 @mixin center {
     // horizontally and vertically center (mixin)
     display: flex;
