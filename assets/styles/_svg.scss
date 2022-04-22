@@ -1,6 +1,50 @@
+// water-pipe effect on the number, got inspiration for this website https://alvarotrigo.com/blog/css-text-animations/
+.water-pipes {
+    box-sizing: content-box;
+    font: 10.5em 'Arial';
+    width: 10vw;
+    margin: 0 23vw 3vw 0;
+    padding-right: 3vw;
+
+    .water-pipes__running-water {
+        fill: transparent;
+        stroke: map-get($main, "text-color");
+        stroke-dasharray: 6% 29%;
+        stroke-width: 5px;
+        stroke-dashoffset: 0%;
+        animation: stroke-offset 5.5s infinite linear;
+    }
+
+    .water-pipes__running-water:nth-child(1){
+    stroke: map-get($water-pipe, "first-color");
+    animation-delay: -1;
+    }
+
+    .water-pipes__running-water:nth-child(2){
+    stroke: map-get($water-pipe, "second-color");
+    animation-delay: -2s;
+    }
+
+    .water-pipes__running-water:nth-child(3){
+    stroke: map-get($water-pipe, "third-color");
+    animation-delay: -3s;
+    }
+
+    .water-pipes__running-water:nth-child(4){
+    stroke: map-get($water-pipe, "fourth-color");
+    animation-delay: -4s;
+    }
+
+    .water-pipes__running-water:nth-child(5){
+    stroke: none;
+    animation-delay: -5s;
+    }
+}
+
+
 // a spraybottle that sprays waterdrops
 #spraybottle {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     opacity: .8;
     width: 15vh;
     transform: rotate(-5deg);
@@ -16,11 +60,6 @@
         transform-origin: 50% 15%;
         animation: handle 2s infinite;
     }
-
-    .spraybottle__text {
-        font-size: 10em;
-        fill: black;
-    }
 }
 
 // one of four persons statistic
@@ -29,7 +68,7 @@
     justify-content: center;
     
     .person {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     width: 6vw;
     position: relative;
     }
@@ -67,7 +106,7 @@
 
 // a bathtub with waves and bubbles that moves 
 #bathtub {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     width: 25vw;
     margin: 0 2rem;
 
@@ -78,7 +117,7 @@
     
     .tub {
         fill: transparent;
-        stroke: $fill-color__svg;
+        stroke: map-get($main, "text-color");
         stroke-miterlimit:10;
         stroke-width: 20px;
     }

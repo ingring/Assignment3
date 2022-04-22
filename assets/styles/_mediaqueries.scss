@@ -1,9 +1,3 @@
-@media (prefers-reduced-motion) {
-    .spray, .handle, .bubbles {
-        animation: none;
-    }
-}
-
 @media (orientation: portrait) {
     .background {
         // make background scale to height in portrait mode
@@ -13,6 +7,10 @@
 
 @media (prefers-color-scheme: light) {
     // light theme config
+    :root {
+        --main__text-color: #{map-get($main, "text-color__lightMode")};
+        --main__bg-color: #{map-get($main, "background__lightMode")};
+    }
 }
 
 @media (prefers-reduced-motion) {
