@@ -193,6 +193,23 @@ figure figcaption {
           animation: droplet_falling 5s infinite linear;
 }
 
+@-webkit-keyframes ocean {
+  from {
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+  }
+  to {
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
+  }
+}
+
+@keyframes ocean {
+  from {
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+  }
+  to {
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
+  }
+}
 @-webkit-keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -209,7 +226,6 @@ figure figcaption {
     opacity: 0;
   }
 }
-
 @keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -303,7 +319,7 @@ figure figcaption {
     border-color: transparent;
   }
   50% {
-    border-color: white;
+    border-color: rgb(226, 224, 212);
   }
 }
 @keyframes blinking-cursor {
@@ -311,7 +327,7 @@ figure figcaption {
     border-color: transparent;
   }
   50% {
-    border-color: white;
+    border-color: rgb(226, 224, 212);
   }
 }
 @-webkit-keyframes wave {
@@ -397,7 +413,7 @@ figure figcaption {
   }
 }
 #spraybottle {
-  fill: white;
+  fill: rgb(226, 224, 212);
   opacity: 0.8;
   width: 15vh;
   transform: rotate(-5deg);
@@ -414,17 +430,13 @@ figure figcaption {
   -webkit-animation: handle 2s infinite;
           animation: handle 2s infinite;
 }
-#spraybottle .spraybottle__text {
-  font-size: 10em;
-  fill: black;
-}
 
 #persons {
   display: flex;
   justify-content: center;
 }
 #persons .person {
-  fill: white;
+  fill: rgb(226, 224, 212);
   width: 6vw;
   position: relative;
 }
@@ -453,7 +465,7 @@ figure figcaption {
 }
 
 #bathtub {
-  fill: white;
+  fill: rgb(226, 224, 212);
   width: 25vw;
   margin: 0 2rem;
 }
@@ -464,7 +476,7 @@ figure figcaption {
 }
 #bathtub .tub {
   fill: transparent;
-  stroke: white;
+  stroke: rgb(226, 224, 212);
   stroke-miterlimit: 10;
   stroke-width: 20px;
 }

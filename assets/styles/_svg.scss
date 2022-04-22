@@ -1,6 +1,6 @@
 // a spraybottle that sprays waterdrops
 #spraybottle {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     opacity: .8;
     width: 15vh;
     transform: rotate(-5deg);
@@ -16,11 +16,6 @@
         transform-origin: 50% 15%;
         animation: handle 2s infinite;
     }
-
-    .spraybottle__text {
-        font-size: 10em;
-        fill: black;
-    }
 }
 
 // one of four persons statistic
@@ -29,7 +24,7 @@
     justify-content: center;
     
     .person {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     width: 6vw;
     position: relative;
     }
@@ -67,7 +62,7 @@
 
 // a bathtub with waves and bubbles that moves 
 #bathtub {
-    fill: $fill-color__svg;
+    fill: map-get($main, "text-color");
     width: 25vw;
     margin: 0 2rem;
 
@@ -78,7 +73,7 @@
     
     .tub {
         fill: transparent;
-        stroke: $fill-color__svg;
+        stroke: map-get($main, "text-color");
         stroke-miterlimit:10;
         stroke-width: 20px;
     }

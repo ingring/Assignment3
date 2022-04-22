@@ -85,7 +85,7 @@ p {
             transform: translateY(7vh);
 
             path {
-                fill: rgb(191, 191, 191);
+                fill: $waterdrop__first--static;
             }
         }
     }
@@ -144,7 +144,7 @@ figure {
         font-family: $font__number;
         font-weight: bolder;
         font-size: 10em;
-        color: rgba(255, 255, 255, 0.5);
+        color: map-get($main, "text-color--opacity");
         -webkit-text-stroke: 2px map-get($main, "text-color"); 
         text-align: center;
         position: relative;

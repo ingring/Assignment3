@@ -1,19 +1,11 @@
+// colors that belongs to the main part of the page 
 $main: (
   "text-color": rgb(226, 224, 212),
   "text-color__lightMode": black,
+  "text-color--opacity": rgba(255, 255, 255, 0.5),
   "background": #121212,
   "background__lightMode": rgb(226, 224, 212),
 );
-
-
-$droplet-active: red;
-$waterdrop__slide--h2: black;
-
-
-// rgba(255, 255, 255, 0.5);
-$fill-color__svg: white;
-$stroke-color__number: white;
-
 
 // making global css variables for the places we want to change the value of the variable in media queries based on lightMode/darkMode
 :root {
@@ -21,4 +13,6 @@ $stroke-color__number: white;
   --main__bg-color: #{map-get($main, "background")};
 }
 
-// var(--main-color)
+// colors that are more spesific to one part of the page
+$waterdrop__slide--h2: black;
+$waterdrop__first--static: rgb(191, 191, 191);

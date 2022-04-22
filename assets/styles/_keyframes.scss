@@ -1,3 +1,13 @@
+// waves on the ocean on the first page 
+@keyframes ocean {
+    from {
+        transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+    }
+    to {
+        transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
+    }
+}
+
 // falling droplets scene animation
 @keyframes droplet_falling {
     0% {
@@ -41,7 +51,7 @@
         border-color: transparent;
     }
     50% {
-        border-color: white; 
+        border-color: map-get($main, "text-color"); 
     }
 }
 
