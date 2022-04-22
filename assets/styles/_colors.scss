@@ -16,3 +16,11 @@ $main: (
 // colors that are more spesific to one part of the page
 $waterdrop__slide--h2: black;
 $waterdrop__first--static: rgb(148, 148, 148);
+
+// four different colors for the water-pipe
+$water-pipe: (
+  "first-color": #0099B4,
+  "second-color": #63C8FF,
+  "third-color": #2D779E,
+  "fourth-color": #68C5E9,
+)

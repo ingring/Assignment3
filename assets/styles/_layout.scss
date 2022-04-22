@@ -14,53 +14,6 @@ main {
     overflow-x: hidden;
 }
 
-.title {
-    // display: flex;
-  
-  .water-pipes-text {
-      font: 10.5em 'Arial';
-      max-width: 50vh;
-  }
-  
-  .text-copy {
-      fill: transparent;
-      stroke: white;
-      stroke-dasharray: 6% 29%;
-      stroke-width: 5px;
-      stroke-dashoffset: 0%;
-      animation: stroke-offset 5.5s infinite linear;
-  }
-  
-  .text-copy:nth-child(1){
-    stroke: #0099B4;
-    animation-delay: -1;
-  }
-  
-  .text-copy:nth-child(2){
-    stroke: #63C8FF;
-    animation-delay: -2s;
-  }
-  
-  .text-copy:nth-child(3){
-    stroke: #2D779E;
-    animation-delay: -3s;
-  }
-  
-  .text-copy:nth-child(4){
-    stroke: #68C5E9;
-    animation-delay: -4s;
-  }
-  
-  .text-copy:nth-child(5){
-    stroke: none;
-    animation-delay: -5s;
-  }
-}
-  
-  @keyframes stroke-offset{
-    100% {stroke-dashoffset: -35%;}
-  }
-
 h2 {
     text-align: center;
     padding-bottom: 2rem;
@@ -99,11 +52,10 @@ p {
         background-size: cover;
         background-position: center;
         filter: brightness(.5);
-        transform: scale(1.2);
 
         // for smooth scene transition
         opacity: 0;
-        transition: opacity 1s, transform 50s;
+        transition: opacity 1s;
     }
 }
 
@@ -236,7 +188,7 @@ figure {
             padding: 1.5rem;
             background-color: $waterdrop__slide--h2;
 
-            // typewriter effect
+            // typewriter effect, inspiration from this website https://css-tricks.com/snippets/css/typewriter-effect/
             margin: 0 auto; 
             letter-spacing: .15em; 
             max-width: 47ch;

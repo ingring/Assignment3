@@ -18,56 +18,6 @@ main {
   overflow-x: hidden;
 }
 
-.title .water-pipes-text {
-  font: 10.5em "Arial";
-  max-width: 50vh;
-}
-.title .text-copy {
-  fill: transparent;
-  stroke: white;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 5px;
-  stroke-dashoffset: 0%;
-  -webkit-animation: stroke-offset 5.5s infinite linear;
-          animation: stroke-offset 5.5s infinite linear;
-}
-.title .text-copy:nth-child(1) {
-  stroke: #0099B4;
-  -webkit-animation-delay: -1;
-          animation-delay: -1;
-}
-.title .text-copy:nth-child(2) {
-  stroke: #63C8FF;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-.title .text-copy:nth-child(3) {
-  stroke: #2D779E;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-}
-.title .text-copy:nth-child(4) {
-  stroke: #68C5E9;
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-}
-.title .text-copy:nth-child(5) {
-  stroke: none;
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
-}
-
-@-webkit-keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
-
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
 h2 {
   text-align: center;
   padding-bottom: 2rem;
@@ -97,9 +47,8 @@ p {
   background-size: cover;
   background-position: center;
   filter: brightness(0.5);
-  transform: scale(1.2);
   opacity: 0;
-  transition: opacity 1s, transform 50s;
+  transition: opacity 1s;
 }
 
 #slides {
@@ -243,6 +192,17 @@ figure figcaption {
           animation: droplet_falling 5s infinite linear;
 }
 
+@-webkit-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
 @-webkit-keyframes ocean {
   from {
     transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
@@ -251,7 +211,6 @@ figure figcaption {
     transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
   }
 }
-
 @keyframes ocean {
   from {
     transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
@@ -327,25 +286,19 @@ figure figcaption {
   }
 }
 @-webkit-keyframes handle {
-  0% {
+  from, to {
     transform: rotate(0);
   }
   50% {
     transform: rotate(-25deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 @keyframes handle {
-  0% {
+  from, to {
     transform: rotate(0);
   }
   50% {
     transform: rotate(-25deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 @-webkit-keyframes typing {
@@ -503,11 +456,6 @@ figure figcaption {
           animation-delay: -5s;
 }
 
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
 #spraybottle {
   fill: rgb(226, 224, 212);
   opacity: 0.8;

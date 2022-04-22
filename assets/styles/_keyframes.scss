@@ -1,3 +1,8 @@
+// water pipe effect on the strokes to the water 
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+  }
+
 // waves on the ocean on the first page 
 @keyframes ocean {
     from {
@@ -31,9 +36,8 @@
 }
 
 @keyframes handle {
-    0%{transform: rotate(0);}
+    from, to{transform: rotate(0);}
     50%{transform: rotate(-25deg);}
-    100%{transform: rotate(0);}
 }
 
 // typewriter 
@@ -55,7 +59,7 @@
     }
 }
 
-// bathtub
+// bathtub, we got the inspiration for the waves on this youtube video https://www.youtube.com/watch?v=Tf6qm5JMUXQ
 @keyframes wave {
 	0%,100% {
 		clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);

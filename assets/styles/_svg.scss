@@ -1,3 +1,4 @@
+// water-pipe effect on the number, got inspiration for this website https://alvarotrigo.com/blog/css-text-animations/
 .water-pipes {
     font: 10.5em 'Arial';
     max-width: 15vh;
@@ -14,22 +15,22 @@
     }
 
     .water-pipes__running-water:nth-child(1){
-    stroke: #0099B4;
+    stroke: map-get($water-pipe, "first-color");
     animation-delay: -1;
     }
 
     .water-pipes__running-water:nth-child(2){
-    stroke: #63C8FF;
+    stroke: map-get($water-pipe, "second-color");
     animation-delay: -2s;
     }
 
     .water-pipes__running-water:nth-child(3){
-    stroke: #2D779E;
+    stroke: map-get($water-pipe, "third-color");
     animation-delay: -3s;
     }
 
     .water-pipes__running-water:nth-child(4){
-    stroke: #68C5E9;
+    stroke: map-get($water-pipe, "fourth-color");
     animation-delay: -4s;
     }
 
@@ -38,11 +39,6 @@
     animation-delay: -5s;
     }
 }
-    
-  
-  @keyframes stroke-offset{
-    100% {stroke-dashoffset: -35%;}
-  }
 
 
 // a spraybottle that sprays waterdrops
