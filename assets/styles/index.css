@@ -281,6 +281,28 @@ figure figcaption {
   }
 }
 
+@-webkit-keyframes ocean_4k {
+  from {
+    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+  }
+  to {
+    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+            transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+  }
+}
+
+@keyframes ocean_4k {
+  from {
+    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+  }
+  to {
+    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+            transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+  }
+}
+
 @-webkit-keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -505,6 +527,27 @@ figure figcaption {
   }
   .motion_number {
     display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .split_slide {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 3800px) {
+  .split_slide, figcaption, h2 {
+    font-size: 3rem !important;
+  }
+  .number {
+    font-size: 20rem !important;
+  }
+  .ocean {
+    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+    -webkit-animation-name: ocean_4k !important;
+            animation-name: ocean_4k !important;
   }
 }
 

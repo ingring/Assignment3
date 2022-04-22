@@ -39,3 +39,25 @@
         display: inline-block !important;
     }
 }
+
+// 1080p
+@media screen and (min-width: 1900px) {
+    .split_slide {
+        font-size: 1.6rem !important;
+    }
+}
+// 4k
+@media screen and (min-width: 3800px) {
+    .split_slide, figcaption, h2 {
+        font-size: 3rem !important;
+    }
+
+    .number {
+        font-size: 20rem !important;
+    }
+
+    .ocean {
+        transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+        animation-name: ocean_4k !important;
+    }
+}

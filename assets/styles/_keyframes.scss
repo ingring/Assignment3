@@ -12,6 +12,14 @@
         transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
     }
 }
+@keyframes ocean_4k {
+    from {
+        transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+    }
+    to {
+        transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+    }
+}
 
 // falling droplets scene animation
 @keyframes droplet_falling {
