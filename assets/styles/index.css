@@ -77,7 +77,7 @@ p {
   transform: translateY(7vh);
 }
 #slides #title_slide #first-waterdrop path {
-  fill: rgb(191, 191, 191);
+  fill: rgb(148, 148, 148);
 }
 #slides .ocean {
   z-index: 2;
@@ -385,8 +385,8 @@ figure figcaption {
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --main__text-color: rgb(226, 224, 212);
-    --main__bg-color: #121212;
+    --main__text-color: black;
+    --main__bg-color: rgb(226, 224, 212);
   }
 }
 @media (prefers-reduced-motion) {

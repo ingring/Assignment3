@@ -9,10 +9,10 @@ $main: (
 
 // making global css variables for the places we want to change the value of the variable in media queries based on lightMode/darkMode
 :root {
-  --main__text-color: #{map-get($main, "background__lightMode")};
+  --main__text-color: #{map-get($main, "text-color")};
   --main__bg-color: #{map-get($main, "background")};
 }
 
 // colors that are more spesific to one part of the page
 $waterdrop__slide--h2: black;
-$waterdrop__first--static: rgb(191, 191, 191);
+$waterdrop__first--static: rgb(148, 148, 148);

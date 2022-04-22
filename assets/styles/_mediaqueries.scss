@@ -8,8 +8,8 @@
 @media (prefers-color-scheme: light) {
     // light theme config
     :root {
-        --main__text-color: #{map-get($main, "background__lightMode")};
-        --main__bg-color: #{map-get($main, "background")};
+        --main__text-color: #{map-get($main, "text-color__lightMode")};
+        --main__bg-color: #{map-get($main, "background__lightMode")};
     }
 }
 
