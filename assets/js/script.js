@@ -84,8 +84,17 @@ const slide_scroller = scrollama()
 		// update sidebar droplets
 		update_sidebar(r.index);
 
-		// play typewriter animation
+		if (r.index == 0) {
+			// show waterdroplet
+			document.getElementById("first-waterdrop").classList.remove("hidden");
+		}
+		else {
+			// hide front page waterdroplet
+			document.getElementById("first-waterdrop").classList.add("hidden");
+		}
+
 		if (r.index == 4) {
+			// play typewriter animation
 			let h2 = r.element.querySelector(".typewriter h2");
 			h2.style.animationPlayState = "running";
 		}
@@ -95,9 +104,6 @@ const slide_scroller = scrollama()
 		switch (r.index) {
 			// front page
 			case 0:
-				// show waterdroplet
-				document.getElementById("first-waterdrop").classList.remove("hidden");
-
 				// turn waterdroplet blue: gradually turn rgb(191, 191, 191) into rgb(0, 57, 79)
 				let waterdroplet = document.querySelector("#first-waterdrop path");
 				let gradient = new_col => 191 - Math.min(r.progress / .5, 1) * (191 - new_col);
@@ -107,10 +113,6 @@ const slide_scroller = scrollama()
 			// second slide animation
 			case 1:
 				scroll_number(r.progress, 0.33, 40, r.element);
-
-				// hide front page waterdroplet
-				document.getElementById("first-waterdrop").classList.add("hidden");
-
 				break;
 
 			// fourth slide animation
