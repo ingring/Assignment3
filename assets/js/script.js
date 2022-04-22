@@ -121,10 +121,6 @@ const slide_scroller = scrollama()
 			// sixth slide animation
 			case 5:
 				let anim_progress = Math.min(r.progress / .75, 1);
-				// put progress thru sigmoid function for ease-in-out smoothing effect
-				// 1 / (1 + e^(-1 * (x - .5) / .1))    (slope of 0.1)
-				anim_progress = 1 / (1 + Math.E ** (-(anim_progress - .5) / .1));
-				console.log(anim_progress);
 
 				// animate trash bag
 				let rotation = `translateX(-20vw) rotateZ(${anim_progress * 90 - 90}deg)`;
