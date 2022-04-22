@@ -1,9 +1,10 @@
 // water-pipe effect on the number, got inspiration for this website https://alvarotrigo.com/blog/css-text-animations/
 .water-pipes {
+    box-sizing: content-box;
     font: 10.5em 'Arial';
-    max-width: 15vh;
-    margin-left: -25vw;
-    margin-top: -20vh;
+    width: 10vw;
+    margin: 0 23vw 3vw 0;
+    padding-right: 3vw;
 
     .water-pipes__running-water {
         fill: transparent;
