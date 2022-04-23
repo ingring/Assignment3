@@ -12,7 +12,7 @@ Users can get started with the project by either using the fork option or by clo
 Users can consult learning materials (lectures) or open an issue on this github page to get help with this project.
 
 ### Technology
-The language used in this project is html, scss, and js. To edit the project we are using Visual Studio Code. 
+The language used in this project is html, scss, and js. To edit the project we are using Visual Studio Code. We have also used Scrollama to get animation while scrolling. 
 
 ### Contributes
 Thomas and Ingrid maintains and contributes to the project. 
@@ -36,6 +36,9 @@ When the user starts to scroll vertically a water drop from the glass will loose
 
 #### Animations on scene 2:
 The number will count from 0 to 40% when the user scrolls. When it hits 40%, the text  on the other side will appear. 
+
+#### Animations on scene 3: 
+The one of four person svg will appear with help of transition and scrollama. 
 
 #### Animations on scene 4: 
 The number counts up to 39% in the same way as on scene 2. On the side of the number it is an animated spraybottle.
