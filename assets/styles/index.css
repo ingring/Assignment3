@@ -1,11 +1,10 @@
 :root {
-  --main__text-color: #e2e0d4;
+  --main__text-color: rgb(226, 224, 212);
   --main__bg-color: #121212;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,7 +13,7 @@ body {
 }
 
 main {
-  color: #e2e0d4;
+  color: rgb(226, 224, 212);
   background-color: #121212;
   overflow-x: hidden;
 }
@@ -30,15 +29,9 @@ p {
 }
 
 .center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #front {
@@ -47,17 +40,14 @@ p {
   width: 100%;
   background-color: black;
 }
-
 #front .background {
   width: 100vw;
   height: 100vh;
   position: absolute;
   background-size: cover;
   background-position: center;
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
+  filter: brightness(0.5);
   opacity: 0;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 
@@ -65,80 +55,53 @@ p {
   width: 100%;
   position: relative;
 }
-
 #slides #title_slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: var(--main__bg-color);
   position: relative;
   z-index: 3;
 }
-
 #slides #title_slide #logo__title {
   width: 33vw;
   position: absolute;
   fill: var(--main__text-color);
 }
-
 #slides #title_slide #first-waterdrop {
   position: fixed;
   height: 18%;
   margin-top: 1%;
-  -webkit-transform: translateY(7vh);
-          transform: translateY(7vh);
+  transform: translateY(7vh);
 }
-
 #slides #title_slide #first-waterdrop path {
-  fill: #949494;
+  fill: rgb(148, 148, 148);
 }
-
 #slides .ocean {
   z-index: 2;
   background-color: var(--main__bg-color);
   -webkit-clip-path: path("M0,256L40,224C80,192,160,128,240,117.3C320,107,400,149,480,192C560,235,640,277,720,288C800,299,880,277,960,234.7C1040,192,1120,128,1200,106.7C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z");
           clip-path: path("M0,256L40,224C80,192,160,128,240,117.3C320,107,400,149,480,192C560,235,640,277,720,288C800,299,880,277,960,234.7C1040,192,1120,128,1200,106.7C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z");
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
-          transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+  transform-origin: right;
+  transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
   -webkit-animation: ocean 10s infinite alternate;
           animation: ocean 10s infinite alternate;
 }
-
 #slides .slide {
   height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50vw 50vw;
-      grid-template-columns: 50vw 50vw;
+  grid-template-columns: 50vw 50vw;
 }
-
 #slides .slide .split_slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 1.1rem;
   padding: 3rem;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
-
 #slides .slide:nth-child(even) > p {
-  -ms-grid-column: 2;
   grid-column: 2;
 }
 
@@ -147,23 +110,15 @@ p {
   height: 100vh;
   position: relative;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 #drop_sidebar .droplet {
   max-height: 11vh;
   max-width: 9vh;
-  -webkit-transition: 1s opacity;
   transition: 1s opacity;
-  opacity: .33;
+  opacity: 0.33;
 }
 
 .active {
@@ -179,16 +134,14 @@ figure .number {
   font-weight: bolder;
   font-size: 10em;
   color: rgba(255, 255, 255, 0.5);
-  -webkit-text-stroke: 2px #e2e0d4;
+  -webkit-text-stroke: 2px rgb(226, 224, 212);
   text-align: center;
   position: relative;
   display: inline-block;
 }
-
 figure .motion_number {
   display: none;
 }
-
 figure figcaption {
   text-align: center;
   font-size: 1.5em;
@@ -198,14 +151,9 @@ figure figcaption {
   position: fixed;
   z-index: 1;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .logo__link img {
   max-width: 10vw;
   padding: 1rem;
@@ -214,21 +162,22 @@ figure figcaption {
 #slides > section:nth-child(6) {
   display: block;
 }
-
-#slides > section:nth-child(6) .content {
+#slides > section:nth-child(6) .typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100vh;
 }
-
-#slides > section:nth-child(6) .content h2 {
+#slides > section:nth-child(6) .typewriter h2 {
   padding: 1.5rem;
   background-color: black;
   margin: 0 auto;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   max-width: 47ch;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0.15em solid #e2e0d4;
+  border-right: 0.15em solid rgb(226, 224, 212);
   -webkit-animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
           animation: typing 5s steps(40, end), blinking-cursor 0.75s step-end infinite;
   -webkit-animation-play-state: paused;
@@ -238,13 +187,133 @@ figure figcaption {
 .droplet_scene {
   position: absolute;
 }
-
 .droplet_scene img {
   position: absolute;
   width: 5vw;
   opacity: 0;
   -webkit-animation: droplet_falling 5s infinite linear;
           animation: droplet_falling 5s infinite linear;
+}
+
+.water-pipes {
+  box-sizing: content-box;
+  font: 10.5em "Arial";
+  width: 10vw;
+  margin: 0 23vw 3vw 0;
+  padding-right: 3vw;
+}
+.water-pipes .water-pipes__running-water {
+  fill: transparent;
+  stroke: rgb(226, 224, 212);
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  -webkit-animation: stroke-offset 5.5s infinite linear;
+          animation: stroke-offset 5.5s infinite linear;
+}
+.water-pipes .water-pipes__running-water:nth-child(1) {
+  stroke: #0099B4;
+  -webkit-animation-delay: -1;
+          animation-delay: -1;
+}
+.water-pipes .water-pipes__running-water:nth-child(2) {
+  stroke: #63C8FF;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+.water-pipes .water-pipes__running-water:nth-child(3) {
+  stroke: #2D779E;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+.water-pipes .water-pipes__running-water:nth-child(4) {
+  stroke: #68C5E9;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+.water-pipes .water-pipes__running-water:nth-child(5) {
+  stroke: none;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+#spraybottle {
+  fill: rgb(226, 224, 212);
+  opacity: 0.8;
+  width: 15vh;
+  transform: rotate(-5deg);
+}
+#spraybottle .spray {
+  opacity: 0;
+  position: relative;
+  -webkit-animation: spray 2s infinite;
+          animation: spray 2s infinite;
+}
+#spraybottle .handle {
+  transform: rotate(-25deg);
+  transform-origin: 50% 15%;
+  -webkit-animation: handle 2s infinite;
+          animation: handle 2s infinite;
+}
+
+#persons {
+  display: flex;
+  justify-content: center;
+  transition: opacity 1s;
+}
+#persons .person {
+  fill: rgb(226, 224, 212);
+  width: 6vw;
+  position: relative;
+}
+#persons .person--opacity {
+  opacity: 0.5;
+}
+
+#trashcan {
+  width: 50%;
+}
+#trashcan path {
+  fill: rgb(226, 224, 212);
+  fill-opacity: 0.5;
+}
+#trashcan path:nth-child(1) {
+  transform-origin: center right;
+}
+
+#trashbag {
+  width: 50%;
+  position: absolute;
+  opacity: 0.75;
+  margin-top: 15vh;
+  padding: 10vh 0 0 40vw;
+  transform: translateX(-20vw) rotateZ(-90deg);
+}
+
+#bathtub {
+  fill: rgb(226, 224, 212);
+  width: 25vw;
+  margin: 0 2rem;
+}
+#bathtub .wave {
+  opacity: 0.8;
+  -webkit-animation: wave 10s ease-in-out infinite;
+          animation: wave 10s ease-in-out infinite;
+}
+#bathtub .tub {
+  fill: transparent;
+  stroke: rgb(226, 224, 212);
+  stroke-miterlimit: 10;
+  stroke-width: 20px;
+}
+#bathtub .bubbles {
+  -webkit-animation: bubbles 30s ease-in-out infinite;
+          animation: bubbles 30s ease-in-out infinite;
+  opacity: 0.8;
+}
+#bathtub .bubbles:nth-child(odd) {
+  -webkit-animation: bubbles 30s ease-in-out infinite 5s;
+          animation: bubbles 30s ease-in-out infinite 5s;
 }
 
 @-webkit-keyframes stroke-offset {
@@ -258,51 +327,38 @@ figure figcaption {
     stroke-dashoffset: -35%;
   }
 }
-
 @-webkit-keyframes ocean {
   from {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
-            transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
   }
   to {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
-            transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
   }
 }
-
 @keyframes ocean {
   from {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
-            transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(12.5vw);
   }
   to {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
-            transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
+    transform: scale(2) translateY(20vh) scaleX(2) translateX(37.5vw);
   }
 }
-
 @-webkit-keyframes ocean_4k {
   from {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
-            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+    transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
   }
   to {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
-            transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+    transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
   }
 }
-
 @keyframes ocean_4k {
   from {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
-            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+    transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
   }
   to {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
-            transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
+    transform: scale(2) translateY(20vh) scaleX(4) translateX(37.5vw);
   }
 }
-
 @-webkit-keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -319,7 +375,6 @@ figure figcaption {
     opacity: 0;
   }
 }
-
 @keyframes droplet_falling {
   0% {
     margin-top: 0;
@@ -336,71 +391,56 @@ figure figcaption {
     opacity: 0;
   }
 }
-
 @-webkit-keyframes spray {
   25% {
     opacity: 0;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   30% {
-    opacity: .2;
+    opacity: 0.2;
   }
   50% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(-1.2vw);
-            transform: translateX(-1.2vw);
+    transform: translateX(-1.2vw);
   }
 }
-
 @keyframes spray {
   25% {
     opacity: 0;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   30% {
-    opacity: .2;
+    opacity: 0.2;
   }
   50% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(-1.2vw);
-            transform: translateX(-1.2vw);
+    transform: translateX(-1.2vw);
   }
 }
-
 @-webkit-keyframes handle {
   from, to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
-
 @keyframes handle {
   from, to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
-
 @-webkit-keyframes typing {
   from {
     width: 0;
@@ -409,7 +449,6 @@ figure figcaption {
     width: 100%;
   }
 }
-
 @keyframes typing {
   from {
     width: 0;
@@ -418,25 +457,22 @@ figure figcaption {
     width: 100%;
   }
 }
-
 @-webkit-keyframes blinking-cursor {
   from, to {
     border-color: transparent;
   }
   50% {
-    border-color: #e2e0d4;
+    border-color: rgb(226, 224, 212);
   }
 }
-
 @keyframes blinking-cursor {
   from, to {
     border-color: transparent;
   }
   50% {
-    border-color: #e2e0d4;
+    border-color: rgb(226, 224, 212);
   }
 }
-
 @-webkit-keyframes wave {
   0%, 100% {
     -webkit-clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
@@ -447,7 +483,6 @@ figure figcaption {
             clip-path: polygon(0 63%, 14% 57%, 25% 50%, 40% 42%, 56% 40%, 71% 44%, 84% 50%, 100% 60%, 100% 100%, 0% 100%);
   }
 }
-
 @keyframes wave {
   0%, 100% {
     -webkit-clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
@@ -458,242 +493,85 @@ figure figcaption {
             clip-path: polygon(0 63%, 14% 57%, 25% 50%, 40% 42%, 56% 40%, 71% 44%, 84% 50%, 100% 60%, 100% 100%, 0% 100%);
   }
 }
-
 @-webkit-keyframes bubbles {
   25% {
-    -webkit-transform: translate(4vw, 6vw) scale(90%);
-            transform: translate(4vw, 6vw) scale(90%);
-    opacity: .5;
+    transform: translate(4vw, 6vw) scale(90%);
+    opacity: 0.5;
   }
   50% {
-    -webkit-transform: translate(2vw, 2vw) scale(100%);
-            transform: translate(2vw, 2vw) scale(100%);
-    opacity: .8;
+    transform: translate(2vw, 2vw) scale(100%);
+    opacity: 0.8;
   }
   70% {
-    -webkit-transform: translate(6vw, 4vw) scale(90%);
-            transform: translate(6vw, 4vw) scale(90%);
-    opacity: .5;
+    transform: translate(6vw, 4vw) scale(90%);
+    opacity: 0.5;
   }
 }
-
 @keyframes bubbles {
   25% {
-    -webkit-transform: translate(4vw, 6vw) scale(90%);
-            transform: translate(4vw, 6vw) scale(90%);
-    opacity: .5;
+    transform: translate(4vw, 6vw) scale(90%);
+    opacity: 0.5;
   }
   50% {
-    -webkit-transform: translate(2vw, 2vw) scale(100%);
-            transform: translate(2vw, 2vw) scale(100%);
-    opacity: .8;
+    transform: translate(2vw, 2vw) scale(100%);
+    opacity: 0.8;
   }
   70% {
-    -webkit-transform: translate(6vw, 4vw) scale(90%);
-            transform: translate(6vw, 4vw) scale(90%);
-    opacity: .5;
+    transform: translate(6vw, 4vw) scale(90%);
+    opacity: 0.5;
   }
 }
-
 @media (orientation: portrait) {
   .background {
     background-size: auto;
   }
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     --main__text-color: black;
-    --main__bg-color: #e2e0d4;
+    --main__bg-color: rgb(226, 224, 212);
   }
 }
-
 @media (prefers-reduced-motion) {
   * {
     -webkit-animation-play-state: paused !important;
             animation-play-state: paused !important;
     animation-direction: reverse !important;
   }
+
   #trashbag {
-    -webkit-transform: translateX(-20vw) !important;
-            transform: translateX(-20vw) !important;
+    transform: translateX(-20vw) !important;
   }
+
   #trashcan path:nth-child(1) {
-    -webkit-transform: rotateZ(0deg) !important;
-            transform: rotateZ(0deg) !important;
+    transform: rotateZ(0deg) !important;
   }
+
   .number {
     display: none !important;
   }
+
   .motion_number {
     display: inline-block !important;
   }
 }
-
 @media screen and (min-width: 1900px) {
   .split_slide {
     font-size: 1.6rem !important;
   }
 }
-
 @media screen and (min-width: 3800px) {
   .split_slide, figcaption, h2 {
     font-size: 3rem !important;
   }
+
   .number {
     font-size: 20rem !important;
   }
+
   .ocean {
-    -webkit-transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
-            transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
+    transform: scale(2) translateY(20vh) scaleX(4) translateX(25vw);
     -webkit-animation-name: ocean_4k !important;
             animation-name: ocean_4k !important;
   }
-}
-
-.water-pipes {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  font: 10.5em 'Arial';
-  width: 10vw;
-  margin: 0 23vw 3vw 0;
-  padding-right: 3vw;
-}
-
-.water-pipes .water-pipes__running-water {
-  fill: transparent;
-  stroke: #e2e0d4;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 5px;
-  stroke-dashoffset: 0%;
-  -webkit-animation: stroke-offset 5.5s infinite linear;
-          animation: stroke-offset 5.5s infinite linear;
-}
-
-.water-pipes .water-pipes__running-water:nth-child(1) {
-  stroke: #0099B4;
-  -webkit-animation-delay: -1;
-          animation-delay: -1;
-}
-
-.water-pipes .water-pipes__running-water:nth-child(2) {
-  stroke: #63C8FF;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-
-.water-pipes .water-pipes__running-water:nth-child(3) {
-  stroke: #2D779E;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-}
-
-.water-pipes .water-pipes__running-water:nth-child(4) {
-  stroke: #68C5E9;
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-}
-
-.water-pipes .water-pipes__running-water:nth-child(5) {
-  stroke: none;
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
-}
-
-#spraybottle {
-  fill: #e2e0d4;
-  opacity: .8;
-  width: 15vh;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-}
-
-#spraybottle .spray {
-  opacity: 0;
-  position: relative;
-  -webkit-animation: spray 2s infinite;
-          animation: spray 2s infinite;
-}
-
-#spraybottle .handle {
-  -webkit-transform: rotate(-25deg);
-          transform: rotate(-25deg);
-  -webkit-transform-origin: 50% 15%;
-          transform-origin: 50% 15%;
-  -webkit-animation: handle 2s infinite;
-          animation: handle 2s infinite;
-}
-
-#persons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#persons .person {
-  fill: #e2e0d4;
-  width: 6vw;
-  position: relative;
-}
-
-#persons .person--opacity {
-  opacity: .5;
-}
-
-#trashcan {
-  width: 50%;
-}
-
-#trashcan path {
-  fill: #e2e0d4;
-  fill-opacity: .5;
-}
-
-#trashcan path:nth-child(1) {
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
-}
-
-#trashbag {
-  width: 50%;
-  position: absolute;
-  opacity: .75;
-  margin-top: 15vh;
-  padding: 10vh 0 0 40vw;
-  -webkit-transform: translateX(-20vw) rotateZ(-90deg);
-          transform: translateX(-20vw) rotateZ(-90deg);
-}
-
-#bathtub {
-  fill: #e2e0d4;
-  width: 25vw;
-  margin: 0 2rem;
-}
-
-#bathtub .wave {
-  opacity: .8;
-  -webkit-animation: wave 10s ease-in-out infinite;
-          animation: wave 10s ease-in-out infinite;
-}
-
-#bathtub .tub {
-  fill: transparent;
-  stroke: #e2e0d4;
-  stroke-miterlimit: 10;
-  stroke-width: 20px;
-}
-
-#bathtub .bubbles {
-  -webkit-animation: bubbles 30s ease-in-out infinite;
-          animation: bubbles 30s ease-in-out infinite;
-  opacity: .8;
-}
-
-#bathtub .bubbles:nth-child(odd) {
-  -webkit-animation: bubbles 30s ease-in-out infinite 5s;
-          animation: bubbles 30s ease-in-out infinite 5s;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

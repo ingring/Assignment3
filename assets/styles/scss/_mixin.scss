@@ -1,0 +1,6 @@
+@mixin center {
+    // horizontally and vertically center (mixin)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

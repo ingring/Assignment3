@@ -24,11 +24,8 @@ p {
     margin: 0 auto;
 }
 
-@mixin center {
-    // horizontally and vertically center (mixin)
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.center {
+    @include center;
 }
 
 #front {
@@ -174,7 +171,8 @@ figure {
     // to cancel grid display on this slide
     display: block;
 
-    .content {
+    .typewriter {
+        @include center;
         position: relative;
         height: 100vh;
 

@@ -66,6 +66,7 @@
 #persons {
     display: flex;
     justify-content: center;
+    transition: opacity 1s;
     
     .person {
     fill: map-get($main, "text-color");

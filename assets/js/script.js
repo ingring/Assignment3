@@ -93,6 +93,10 @@ const slide_scroller = scrollama()
 			document.getElementById("first-waterdrop").classList.add("hidden");
 		}
 
+		if (r.index == 2) {
+			document.getElementById("persons").classList.remove("hidden");
+		}
+
 		if (r.index == 4) {
 			// play typewriter animation
 			let h2 = r.element.querySelector(".typewriter h2");
