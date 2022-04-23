@@ -259,7 +259,7 @@ figure figcaption {
 #persons {
   display: flex;
   justify-content: center;
-  transition: opacity 1s;
+  transition: opacity 3s;
 }
 #persons .person {
   fill: rgb(226, 224, 212);

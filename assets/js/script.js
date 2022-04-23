@@ -94,6 +94,7 @@ const slide_scroller = scrollama()
 		}
 
 		if (r.index == 2) {
+			// shows the persons svg 
 			document.getElementById("persons").classList.remove("hidden");
 		}
 
