@@ -17,6 +17,12 @@ The language used in this project is html, scss, and js. To edit the project we 
 ### Contributes
 Thomas and Ingrid maintains and contributes to the project. 
 
+### Visit the website
+https://ingring.github.io/scrollytelling_sanitation/
+
+### Notes
+This project is not as responsive as we hoped for. It is not designed for mobile devices, just desktops. 
+
 ## Design for Animation 
 ### Design idea
 Different background pictures that changes from every scene with information about the goal. In addition, a water drop timeline on the side that indicates how long the story is. 
